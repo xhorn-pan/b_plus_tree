@@ -3,16 +3,16 @@
 #	Xinghua Pan (xi.pan@ufl.edu)
 #
 
-SRCS		= b_plus_tree.cc main.cc
+SRCS		= b_plus_tree.cc main.cc 
 OBJS		= $(SRCS:.cc=.o)
-HEADERS		= b_plus_tree.h catch2.h
+HEADERS		= b_plus_tree.h catch2.h stack.h
 OUT		= bplustree
-TEST_SRCS	= b_plus_tree_test.cc  main_test.cc
+TEST_SRCS	= b_plus_tree_test.cc  stack_test.cc main_test.cc
 TEST_OBJS	= $(TEST_SRCS:.cc=.o)
 TEST_OUT	= runtest
 
-CC	 	= g++
-FLAGS	 	= -std=c++11 -Wall -Wextra -Werror
+CC	 	= clang++
+FLAGS	 	= -std=c++14 -Wall -g #-Wextra -Werror
 LFLAGS	 	= #-lpthread
 # -g option enables debugging mode 
 # -c flag generates object code for separate files
@@ -24,8 +24,8 @@ all: $(OBJS)
 # unittest using catch2 https://github.com/catchorg/Catch2
 .PHONY: runtest clean
 
-test:
-	$(CC) -g -o $(TEST_OUT) $(TEST_SRC) $(LFLAGS)
+test: $(TEST_OBJS)
+	$(CC) -g -o $(TEST_OUT) $(TEST_SRCS) $(LFLAGS)
 
 runtest: test
 	./runtest

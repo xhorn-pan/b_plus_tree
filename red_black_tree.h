@@ -12,16 +12,16 @@ class red_black_tree {
 private:
     struct rb_tree_node {
         rb_tree_node();
-        rb_tree_node ( const int key, TData* data ) : key ( key ), data ( data ) {
+        rb_tree_node ( const int key, TData data ) : key ( key ), data ( data ) {
             this->left_size = 0;
 //             this->color = node_color::black;
-            this->rank = 1; 
+            this->rank = 1;
             this->left = nullptr;
             this->right = nullptr;
             this->parent = nullptr;
         };
         ~rb_tree_node();
-        
+
         node_color color;
         short int left_size;
         short int rank;
@@ -29,7 +29,7 @@ private:
         rb_tree_node* right;
         rb_tree_node* parent;
         const long long key;
-        TData* data;
+        TData data;
     };
 
     rb_tree_node* root;
@@ -37,10 +37,10 @@ public:
     red_black_tree();
     ~red_black_tree();
     //const rb_tree_node<TData>& operator[](int i);
-    void insert_key_value ( const int key, TData* data );
+    void insert_key_value ( const int key, TData data );
     //void insert_key_value(const int key, TData&& data);
     void delete_key ( const int key );
-    TData* search ( const int key );
+    TData search ( const int key );
     void fixup_tree ( rb_tree_node* node );
     void fix_parent_pointer ( rb_tree_node* old_node, rb_tree_node* new_node );
     void left_rotate ( rb_tree_node* node );
@@ -175,7 +175,7 @@ void red_black_tree<TData>::fixup_tree ( rb_tree_node* node ) {
         // if sibling is null, it is an external node, take it as black,
         // or sibling is not null and color is black
         switch ( rotateType ) {
-        case 0: 
+        case 0:
             /** LLb           |                          |
              *           (gp) z                          y
              *              // \                       // \\
@@ -243,11 +243,11 @@ void red_black_tree<TData>::fixup_tree ( rb_tree_node* node ) {
             node->color = node_color::black;
             // update rank, this is the only situation where rank of nodes incresed.
             gp->rank += 1;
-        } 
+        }
         // if gp is root, fixup termnate
-        // if gp is not root, mark it as red, check gp's parent(ggp), 
+        // if gp is not root, mark it as red, check gp's parent(ggp),
         // if ggp is not null and its color is red, continue fixup
-        if ( gp->parent != nullptr ) { 
+        if ( gp->parent != nullptr ) {
             gp->color = node_color::red;
             if ( ( gp->parent->parent != nullptr ) && ( gp->parent->color == node_color::red ) ) {
                 fixup_tree ( gp->parent );
@@ -257,7 +257,7 @@ void red_black_tree<TData>::fixup_tree ( rb_tree_node* node ) {
 }
 
 template<typename TData>
-inline void red_black_tree<TData>::insert_key_value ( const int key, TData *data ) {
+inline void red_black_tree<TData>::insert_key_value ( const int key, TData data ) {
     if ( root == nullptr ) {
         root = new rb_tree_node ( key, data );
         root->color = node_color::black;

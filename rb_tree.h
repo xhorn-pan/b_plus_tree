@@ -1,5 +1,5 @@
-#ifndef RB_TREE_1_H_
-#define RB_TREE_1_H_
+#ifndef RB_TREE_H_
+#define RB_TREE_H_
 
 #include <cassert>
 #include <iostream>
@@ -53,13 +53,19 @@ template <class data_type, template <class> class node_type = rb_tree_node>
 class rb_tree {
 public:
   rb_tree() : root(nullptr){};
-  explicit rb_tree(node_type<data_type> *o) : root(o){};
+  explicit rb_tree(node_type<data_type> *o);
+  rb_tree<data_type>& operator=(rb_tree<data_type> const& o) {
+    this->root = o.root;
+    return *this;
+  }
+  
   virtual ~rb_tree() {
     if (root)
       destory_(root);
   };
   void insert(data_type data) { insert_(data); };
   void print_tree() {
+    // for debug
     if (root) {
       print_node(root, 0);
       std::cout << "=======================" << std::endl;
@@ -75,9 +81,14 @@ public:
     delete_(i);
     delete i;
   };
-
-  // protected:
-  // for debug
+  node_type<data_type>* nth(short int n);// { return nth_(n); };
+  // after join, b_ is destroyed
+  void join_(node_type<data_type> *m_, rb_tree<data_type> *b_);
+  short int get_size_of(node_type<data_type> *node_);
+  // this emit the elments larger than s_ to b_,
+  // after this, only smaller in tree
+  data_type split_(short int n_, rb_tree<data_type> *b_);
+protected:  
   void print_node(node_type<data_type> *node_, int space) {
     if (not node_)
       return;
@@ -93,7 +104,7 @@ public:
     print_node(node_->left, space);
   }
   void insert_(data_type data);
-  node_type<data_type> *insert_(node_type<data_type> *inode);
+  void insert_(node_type<data_type> *inode);
   node_type<data_type> *sibling_of_(node_type<data_type> *node_);
   node_type<data_type> *next_(node_type<data_type> *node_);
   node_type<data_type> *prev_(node_type<data_type> *node_);
@@ -113,12 +124,189 @@ public:
   };
   void fix_delete_(node_type<data_type> *dnode, node_type<data_type> *pod,
                    node_type<data_type> *cod);
-  void split_();
-  void join_();
 
+  //  node_type<data_type>* nth_(short int n);
+  void split__(node_type<data_type>* node_,  bool was_left, rb_tree<data_type>* s_tree,  rb_tree<data_type>* b_tree);
 private:
   node_type<data_type> *root;
 };
+
+
+template <class data_type, template <class> class node_type>
+rb_tree<data_type, node_type>::rb_tree(node_type<data_type> *node_) {
+  root = node_;
+  if (root) {
+    root->color = node_color::black;
+    root->parent = nullptr;  
+  }
+}
+
+template <class data_type, template <class> class node_type>
+inline short int
+rb_tree<data_type, node_type>::get_size_of(node_type<data_type> *node_) {
+  short int sum = 0;
+  while(node_) {
+    sum += (node_->left_size + 1);
+    node_ = node_->right;
+  }
+  return sum;
+}
+
+
+template <class data_type, template <class> class node_type>
+inline data_type 
+rb_tree<data_type, node_type>::split_(short int n_, rb_tree<data_type> *b_) {
+  // node_type<data_type>* tmp = s_->left;
+  //  assert(n_ < get_size_of(root));
+  auto s_ = nth(n_);
+  if(not s_) {
+    return NULL;
+  }
+  auto r_ = s_->data; // for return;
+  
+  rb_tree<data_type>* s_tree = new rb_tree<data_type>(s_->left);
+  rb_tree<data_type>* b_tree = new rb_tree<data_type>(s_->right);
+
+  auto it_ = s_;
+  //auto parent = nullptr;
+  if (it_->parent) {
+    split__(it_->parent,  it_->is_left_child_of_parent(),  s_tree,  b_tree);
+  }
+  
+  this->root = s_tree->root;
+  s_tree->root = nullptr;
+  b_->root = b_tree->root;
+  b_tree->root = nullptr;
+  // FIXME without delete s_tree,  memory leak
+  // delete it will cause some error some time
+  //delete s_tree;
+  delete b_tree;
+  return r_; 
+}
+
+template <class data_type, template <class> class node_type>
+inline void 
+rb_tree<data_type, node_type>::split__(node_type<data_type>* node_,  bool was_left, rb_tree<data_type>* s_tree,  rb_tree<data_type>* b_tree) {
+  bool cont_ = false, new_was_left;
+  node_type<data_type>* gp;
+  if (node_->parent) {
+    cont_ = true;
+    gp = node_->parent;
+    new_was_left = node_->is_left_child_of_parent();
+  }
+  if (was_left) {
+    b_tree->join_(node_, new rb_tree<data_type>(node_->right));
+  } else {
+    auto tmp = new rb_tree<data_type>(node_->left);
+      tmp->join_(node_, s_tree);
+      s_tree->root = tmp->root;
+      tmp->root = nullptr;
+      delete tmp;
+  }
+  if (cont_) {
+    split__(gp,  new_was_left, s_tree,  b_tree);
+  }
+}
+template <class data_type, template <class> class node_type>
+inline void
+rb_tree<data_type, node_type>::join_(node_type<data_type> *m_, rb_tree<data_type> *b_) {
+  m_->left = nullptr;
+  m_->right = nullptr;
+  m_->parent = nullptr;
+  m_->color = node_color::red;
+  m_->left_size = 0;
+  m_->rank = 1;
+  if((not root) and (not b_->root)) {
+    root = m_;
+    m_->color = node_color::black;
+    m_->left_size = 0;
+    m_->rank = 1;
+  } else if ( not root ) {
+    b_->insert_(m_);
+    b_->fix_insert_(m_);
+    // DONE fix left size;
+    b_->update_left_size_(m_);// only one node insert
+    root = b_->root;
+  } else if (not b_->root) {
+    insert_(m_);
+    fix_insert_(m_);
+    // DONE fox left size;
+    // m_ is the largest in the tree, no left size to be update
+  } else {
+    if(b_->root->rank < root->rank) {
+      node_type<data_type>*  s__ = root->right;
+      while(b_->root->rank < s__->rank) {
+        s__ = s__->right;
+      }
+      m_->parent = s__->parent;
+      s__->parent->right = m_;
+      s__->parent = m_;
+      m_->left = s__;
+      m_->right = b_->root;
+      b_->root->parent = m_;
+      m_->rank = s__->rank + 1;
+      m_->color = node_color::red;
+      // TODO fix left_size, m_ is right child of it ancestors
+      // only m_' left size need to update
+      m_->left_size = get_size_of(s__);
+      fix_insert_(m_);
+    } else if (b_->root->rank > root->rank) {
+      node_type<data_type>* b__ = b_->root->left;
+      while(b__->rank > root->rank) {
+        b__ = b__->left;
+      }
+      m_->parent = b__->parent;
+      b__->parent->left = m_;
+      b__->parent = m_;
+      m_->right = b__;
+      m_->left = root;
+      root->parent = m_;
+      m_->rank = root->rank + 1;
+      // TODO fix left size
+      m_->left_size = get_size_of(root);
+      b_->update_left_size_(m_, m_->left_size + 1);
+      m_->color = node_color::red;
+      b_->fix_insert_(m_);
+      root = b_->root;
+    } else {
+      m_->rank = root->rank + 1;
+      m_->color = node_color::black;
+      m_->left = root;
+      root->parent = m_;
+      m_->right = b_->root;
+      b_->root->parent = m_;
+      // TODO m's left_size need update
+      m_->left_size = get_size_of(root);
+      root = m_;
+    }
+  }
+  // if b_ is not null, its nodes move to s_ now,
+  // delete it
+  if (b_->root) {
+    b_->root = nullptr;
+    delete b_;
+  }
+}
+
+template <class data_type, template <class> class node_type>
+inline node_type<data_type>*
+rb_tree<data_type, node_type>::nth(short int n) {
+  // if((not root) or (n<0)) {
+  //   return nullptr;
+  // }
+  auto tmp = root;
+  while(((n >= 0) && (tmp != nullptr))) {
+    if (tmp->left_size == n) {
+      return tmp;
+    } else if (tmp->left_size > n) {
+      tmp = tmp->left;
+    } else {
+      n -= (tmp->left_size + 1);
+      tmp = tmp->right;
+    }
+  }
+  return nullptr;
+}
 
 template <class data_type, template <class> class node_type>
 inline void
@@ -534,7 +722,7 @@ template <class data_type, template <class> class node_type>
 inline node_type<data_type> *
 rb_tree<data_type, node_type>::search_(node_type<data_type> *snode) {
   node_type<data_type> *it = root;
-
+  
   while (true) {
     if (it->data == snode->data) {
       break;
@@ -557,28 +745,35 @@ rb_tree<data_type, node_type>::search_(node_type<data_type> *snode) {
 }
 
 template <class data_type, template <class> class node_type>
-inline node_type<data_type> *
+inline void
 rb_tree<data_type, node_type>::insert_(node_type<data_type> *inode) {
   if (root == nullptr) {
     root = inode;
-    return root;
+    root->color = node_color::black;
+    return;
   }
-  node_type<data_type> *r_ = search_(inode);
-  //  if (r_ == inode) {
-  //  if (r_->data != inode->data) {
-  //    r_->data = inode->data;
-  //  }
-  //} else
-  if (r_->data < inode->data) {
-    r_->right = inode;
-    inode->parent = r_;
-  } else if (r_->data > inode->data) {
-    r_->left = inode;
-    inode->parent = r_;
+  auto tmp = root;
+  auto parent = root;
+  while (tmp) {
+    parent = tmp;
+    if (tmp->data == inode->data) {
+      // FIX ME with key-value data
+      delete inode;
+      return;
+    } else if(tmp->data < inode->data) {
+      tmp = tmp->right;
+    } else {
+      tmp = tmp->left;
+    }
+  }
+  inode->parent = parent;
+  if (inode->data > parent->data) {
+    parent->right = inode;
   } else {
-    return r_;
+    parent->left = inode;
   }
-  return inode;
+  update_left_size_(inode);
+  fix_insert_(inode);
 };
 
 template <class data_type, template <class> class node_type>
@@ -698,10 +893,14 @@ rb_tree<data_type, node_type>::fix_insert_(node_type<data_type> *node_) {
 };
 template <class data_type, template <class> class node_type>
 inline void rb_tree<data_type, node_type>::insert_(data_type data) {
+  // FIX ME, memory leak when insert dup data;
   node_type<data_type> *i = new node_type<data_type>(data);
-  node_type<data_type> *ri = insert_(i);
-  update_left_size_(ri);
-  fix_insert_(ri);
+  //node_type<data_type> *ri =
+  insert_(i);
+  // if(i) {
+  //   update_left_size_(i);
+  //   fix_insert_(i);
+  // }
 };
 
 template <class data_type, template <class> class node_type>

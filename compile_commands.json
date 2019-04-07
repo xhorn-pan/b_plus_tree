@@ -1,0 +1,5 @@
+[{
+    "directory": "/home/xhorn/Code/cop5536-proj/",
+    "command" : "clang++ -std=c++14 -g rb_main_1.cc",
+    "file" : "rb_tree.h rb_main_1.cc"
+}]

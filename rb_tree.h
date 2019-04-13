@@ -3,8 +3,8 @@
 
 #include <cassert>
 #include <iostream>
-#include <vector>
 #include <type_traits>
+#include <vector>
 
 namespace cop5536 {
 // typedef std::pair<long long, double> kv;
@@ -14,7 +14,8 @@ template <class node_type> struct rb_base_ {
   node_type *left{nullptr};
   node_type *right{nullptr};
   node_type *parent{nullptr};
-  //rb_base_(const rb_base_& o) : left(o.left), right(o.right), parent(o.parent){};
+  // rb_base_(const rb_base_& o) : left(o.left), right(o.right),
+  // parent(o.parent){};
 };
 
 template <class key_type, class data_type>
@@ -25,16 +26,16 @@ struct rb_tree_node : rb_base_<rb_tree_node<key_type, data_type>> {
   short int left_size;
   short int rank;
 
-  //rb_tree_node();
+  // rb_tree_node();
   rb_tree_node<key_type, data_type>(key_type key, data_type real_data)
       : rb_base_<rb_tree_node<key_type, data_type>>(), key(key),
         data(real_data), color(node_color::red), left_size(0), rank(1){};
-  //rb_tree_node<key_type, data_type>(const rb_tree_node& rb)
+  // rb_tree_node<key_type, data_type>(const rb_tree_node& rb)
   //    : rb_base_<rb_tree_node<key_type, data_type>>(), key(rb.key),
   //      data(rb.data), color(node_color::red), left_size(0), rank(1){};
   // ~rb_tree_node(); // { std::cout << "destr in rb_tree_node" << std::endl; };
   ~rb_tree_node(){};
-  
+
   friend bool operator==(const rb_tree_node<key_type, data_type> &bt1,
                          const rb_tree_node<key_type, data_type> &bt2) {
     return bt1.key == bt2.key;
@@ -64,7 +65,7 @@ class rb_tree {
 public:
   rb_tree() : root(nullptr){};
   explicit rb_tree(node_type<key_type, data_type> *o);
-  rb_tree(const rb_tree& o) {this->root = o.root;};
+  rb_tree(const rb_tree &o) { this->root = o.root; };
   virtual ~rb_tree() {
     if (root)
       destory_(root);
@@ -89,20 +90,20 @@ public:
 
     std::cout << node_->key << " " << node_->data;
     (node_->color == node_color::red) ? std::cout << "red "
-        : std::cout << "black ";
+                                      : std::cout << "black ";
     std::cout << node_->rank << " " << node_->left_size << "\n";
     print_node(node_->left, space);
   }
-  void get_keys(std::vector<key_type>& vec){
-    get_keys__(root, vec);
-  };
-  void get_keys__(node_type<key_type, data_type>* node_, std::vector<key_type>& vec) {
-    if(not node_) return;
+  void get_keys(std::vector<key_type> &vec) { get_keys__(root, vec); };
+  void get_keys__(node_type<key_type, data_type> *node_,
+                  std::vector<key_type> &vec) {
+    if (not node_)
+      return;
     get_keys__(node_->left, vec);
     vec.push_back(node_->key);
     get_keys__(node_->right, vec);
-  } 
-  bool delete_key(key_type key){return delete_(key);}; 
+  }
+  bool delete_key(key_type key) { return delete_(key); };
   node_type<key_type, data_type> *nth(short int n); // { return nth_(n); };
   // after join, b_ is destroyed
   void join_(node_type<key_type, data_type> *m_,
@@ -110,14 +111,17 @@ public:
   short int get_size_of(node_type<key_type, data_type> *node_);
   // this emit the elments larger than s_ to b_,
   // after this, only smaller in tree
-  node_type<key_type, data_type>* split_(short int n_, rb_tree<key_type, data_type> *b_);
-  void split_(node_type<key_type, data_type>* node_, rb_tree<key_type, data_type> *b_);
+  node_type<key_type, data_type> *split_(short int n_,
+                                         rb_tree<key_type, data_type> *b_);
+  void split_(node_type<key_type, data_type> *node_,
+              rb_tree<key_type, data_type> *b_);
   data_type search(key_type key);
-  node_type<key_type, data_type>* search_eq_or_gt(key_type key);
-  std::vector<node_type<key_type, data_type>*>* search_range(key_type low, key_type high);
+  node_type<key_type, data_type> *search_eq_or_gt(key_type key);
+  std::vector<node_type<key_type, data_type> *> *search_range(key_type low,
+                                                              key_type high);
 
-  //protected:
- 
+  // protected:
+
   bool insert_(key_type key, data_type data);
   bool insert_(node_type<key_type, data_type> *inode);
   node_type<key_type, data_type> *
@@ -132,7 +136,7 @@ public:
   void right_rotate_(node_type<key_type, data_type> *rnode);
   virtual void copy_data_(node_type<key_type, data_type> *from,
                           node_type<key_type, data_type> *to);
-  virtual node_type<key_type, data_type>* search_(key_type key);
+  virtual node_type<key_type, data_type> *search_(key_type key);
   virtual bool delete_(key_type key);
   void destory_(node_type<key_type, data_type> *node_);
   void update_left_size_(node_type<key_type, data_type> *node_, int sz = 1);
@@ -178,11 +182,10 @@ inline short int rb_tree<key_type, data_type, node_type>::get_size_of(
   return sum;
 }
 
-
 template <class key_type, class data_type,
           template <class, class> class node_type>
-inline void
-rb_tree<key_type, data_type, node_type>::split_(node_type<key_type, data_type>* node_, rb_tree<key_type, data_type> *b_) {
+inline void rb_tree<key_type, data_type, node_type>::split_(
+    node_type<key_type, data_type> *node_, rb_tree<key_type, data_type> *b_) {
   assert(node_);
   rb_tree<key_type, data_type> *s_tree =
       new rb_tree<key_type, data_type>(node_->left);
@@ -203,7 +206,7 @@ rb_tree<key_type, data_type, node_type>::split_(node_type<key_type, data_type>* 
   // delete it will cause some error some time
   // delete s_tree;
   delete b_tree;
-  //return node_;
+  // return node_;
 }
 template <class key_type, class data_type,
           template <class, class> class node_type>
@@ -396,7 +399,7 @@ inline node_type<key_type, data_type> *
 rb_tree<key_type, data_type, node_type>::next_(
     node_type<key_type, data_type> *node_) {
   // assert(node_->right);
-  if(not node_->right) {
+  if (not node_->right) {
     return nullptr;
   }
   node_type<key_type, data_type> *min = node_->right;
@@ -412,7 +415,7 @@ inline node_type<key_type, data_type> *
 rb_tree<key_type, data_type, node_type>::prev_(
     node_type<key_type, data_type> *node_) {
   // assert(node_->left);
-  if(not node_->left) {
+  if (not node_->left) {
     return nullptr;
   }
   node_type<key_type, data_type> *max = node_->left;
@@ -780,7 +783,7 @@ inline void rb_tree<key_type, data_type, node_type>::right_rotate_(
 template <class key_type, class data_type,
           template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::search_range_(
-    std::vector<node_type<key_type, data_type>*>* rs,
+    std::vector<node_type<key_type, data_type> *> *rs,
     node_type<key_type, data_type> *node_, key_type low, key_type high) {
   if (node_) {
     if (node_->key < low) {
@@ -789,7 +792,7 @@ inline void rb_tree<key_type, data_type, node_type>::search_range_(
       search_range_(rs, node_->left, low, high);
     } else {
       search_range_(rs, node_->left, low, node_->key);
-      //std::cout << node_->key << " " << node_->data << ";";
+      // std::cout << node_->key << " " << node_->data << ";";
       rs->push_back(node_);
       search_range_(rs, node_->right, node_->key, high);
     }
@@ -798,7 +801,7 @@ inline void rb_tree<key_type, data_type, node_type>::search_range_(
 
 template <class key_type, class data_type,
           template <class, class> class node_type>
-inline std::vector<node_type<key_type, data_type>*>*
+inline std::vector<node_type<key_type, data_type> *> *
 rb_tree<key_type, data_type, node_type>::search_range(key_type low,
                                                       key_type high) {
   std::vector<node_type<key_type, data_type> *> *rs =
@@ -823,7 +826,7 @@ inline data_type rb_tree<key_type, data_type, node_type>::search(key_type key) {
 }
 template <class key_type, class data_type,
           template <class, class> class node_type>
-inline node_type<key_type, data_type>*
+inline node_type<key_type, data_type> *
 rb_tree<key_type, data_type, node_type>::search_eq_or_gt(key_type key) {
   node_type<key_type, data_type> *it = root, *min_q = root;
   while (it) {

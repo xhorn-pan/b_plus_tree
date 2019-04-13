@@ -3,15 +3,15 @@
 #	Xinghua Pan (xi.pan@ufl.edu)
 #
 
-SRCS		= bp_tree.cc main.cc 
+SRCS		= main.cc 
 OBJS		= $(SRCS:.cc=.o)
-HEADERS		= bp_tree.h catch2.h rb_tree.h
+HEADERS		= bp_tree.hrb_tree.h
 OUT		= bplustree
-TEST_SRCS	= bp_tree_test.cc main_test.cc
+TEST_SRCS	= bp_main.cc rb_main.cc
 TEST_OBJS	= $(TEST_SRCS:.cc=.o)
 TEST_OUT	= runtest
 
-CC	 	= clang++
+CC	 	= g++
 FLAGS	 	= -std=c++14 -Wall -g #-Wextra -Werror
 LFLAGS	 	= -lpthread
 # -g option enables debugging mode 

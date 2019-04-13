@@ -3,9 +3,10 @@
 
 #include <cassert>
 #include <iostream>
+#include <vector>
+#include <type_traits>
 
 namespace cop5536 {
-
 // typedef std::pair<long long, double> kv;
 enum class node_color { red = 0, black };
 
@@ -13,6 +14,7 @@ template <class node_type> struct rb_base_ {
   node_type *left{nullptr};
   node_type *right{nullptr};
   node_type *parent{nullptr};
+  //rb_base_(const rb_base_& o) : left(o.left), right(o.right), parent(o.parent){};
 };
 
 template <class key_type, class data_type>
@@ -23,10 +25,16 @@ struct rb_tree_node : rb_base_<rb_tree_node<key_type, data_type>> {
   short int left_size;
   short int rank;
 
+  //rb_tree_node();
   rb_tree_node<key_type, data_type>(key_type key, data_type real_data)
       : rb_base_<rb_tree_node<key_type, data_type>>(), key(key),
         data(real_data), color(node_color::red), left_size(0), rank(1){};
+  //rb_tree_node<key_type, data_type>(const rb_tree_node& rb)
+  //    : rb_base_<rb_tree_node<key_type, data_type>>(), key(rb.key),
+  //      data(rb.data), color(node_color::red), left_size(0), rank(1){};
   // ~rb_tree_node(); // { std::cout << "destr in rb_tree_node" << std::endl; };
+  ~rb_tree_node(){};
+  
   friend bool operator==(const rb_tree_node<key_type, data_type> &bt1,
                          const rb_tree_node<key_type, data_type> &bt2) {
     return bt1.key == bt2.key;
@@ -56,17 +64,12 @@ class rb_tree {
 public:
   rb_tree() : root(nullptr){};
   explicit rb_tree(node_type<key_type, data_type> *o);
-  // rb_tree<key_type, data_type>& operator=(rb_tree<key_type, data_type> const&
-  // o) {
-  //   this->root = o.root;
-  //   return *this;
-  // }
-
+  rb_tree(const rb_tree& o) {this->root = o.root;};
   virtual ~rb_tree() {
     if (root)
       destory_(root);
   };
-  void insert(key_type key, data_type data) { insert_(key, data); };
+  bool insert(key_type key, data_type data) { return insert_(key, data); };
   void print_tree() {
     // for debug
     if (root) {
@@ -76,25 +79,6 @@ public:
       std::cout << "empty tree" << std::endl;
     }
   };
-  void delete_key(key_type key); // {
-                                 // if (root == nullptr) {
-                                 //   return;
-                                 // }
-                                 // auto
-                                 // //node_type<data_type> *i = new
-                                 // node_type<data_type>(data); delete_(i);
-                                 // delete i;
-  //};
-  node_type<key_type, data_type> *nth(short int n); // { return nth_(n); };
-  // after join, b_ is destroyed
-  void join_(node_type<key_type, data_type> *m_,
-             rb_tree<key_type, data_type> *b_);
-  short int get_size_of(node_type<key_type, data_type> *node_);
-  // this emit the elments larger than s_ to b_,
-  // after this, only smaller in tree
-  key_type split_(short int n_, rb_tree<key_type, data_type> *b_);
-
-protected:
   void print_node(node_type<key_type, data_type> *node_, int space) {
     if (not node_)
       return;
@@ -105,12 +89,37 @@ protected:
 
     std::cout << node_->key << " " << node_->data;
     (node_->color == node_color::red) ? std::cout << "red "
-                                      : std::cout << "black ";
+        : std::cout << "black ";
     std::cout << node_->rank << " " << node_->left_size << "\n";
     print_node(node_->left, space);
   }
-  void insert_(key_type key, data_type data);
-  void insert_(node_type<key_type, data_type> *inode);
+  void get_keys(std::vector<key_type>& vec){
+    get_keys__(root, vec);
+  };
+  void get_keys__(node_type<key_type, data_type>* node_, std::vector<key_type>& vec) {
+    if(not node_) return;
+    get_keys__(node_->left, vec);
+    vec.push_back(node_->key);
+    get_keys__(node_->right, vec);
+  } 
+  bool delete_key(key_type key){return delete_(key);}; 
+  node_type<key_type, data_type> *nth(short int n); // { return nth_(n); };
+  // after join, b_ is destroyed
+  void join_(node_type<key_type, data_type> *m_,
+             rb_tree<key_type, data_type> *b_);
+  short int get_size_of(node_type<key_type, data_type> *node_);
+  // this emit the elments larger than s_ to b_,
+  // after this, only smaller in tree
+  node_type<key_type, data_type>* split_(short int n_, rb_tree<key_type, data_type> *b_);
+  void split_(node_type<key_type, data_type>* node_, rb_tree<key_type, data_type> *b_);
+  data_type search(key_type key);
+  node_type<key_type, data_type>* search_eq_or_gt(key_type key);
+  std::vector<node_type<key_type, data_type>*>* search_range(key_type low, key_type high);
+
+  //protected:
+ 
+  bool insert_(key_type key, data_type data);
+  bool insert_(node_type<key_type, data_type> *inode);
   node_type<key_type, data_type> *
   sibling_of_(node_type<key_type, data_type> *node_);
   node_type<key_type, data_type> *next_(node_type<key_type, data_type> *node_);
@@ -123,9 +132,8 @@ protected:
   void right_rotate_(node_type<key_type, data_type> *rnode);
   virtual void copy_data_(node_type<key_type, data_type> *from,
                           node_type<key_type, data_type> *to);
-  virtual node_type<key_type, data_type> *
-  search_(node_type<key_type, data_type> *np);
-  virtual void delete_(node_type<key_type, data_type> *np);
+  virtual node_type<key_type, data_type>* search_(key_type key);
+  virtual bool delete_(key_type key);
   void destory_(node_type<key_type, data_type> *node_);
   void update_left_size_(node_type<key_type, data_type> *node_, int sz = 1);
   void fix_insert_(node_type<key_type, data_type> *node_);
@@ -135,17 +143,22 @@ protected:
   void fix_delete_(node_type<key_type, data_type> *dnode,
                    node_type<key_type, data_type> *pod,
                    node_type<key_type, data_type> *cod);
-
+  void search_range_(std::vector<node_type<key_type, data_type> *> *rs,
+                     node_type<key_type, data_type> *node_, key_type low,
+                     key_type high);
   //  node_type<key_type, data_type>* nth_(short int n);
   void split__(node_type<key_type, data_type> *node_, bool was_left,
-               rb_tree<key_type, data_type> *s_tree, rb_tree<key_type, data_type> *b_tree);
+               rb_tree<key_type, data_type> *s_tree,
+               rb_tree<key_type, data_type> *b_tree);
 
 private:
   node_type<key_type, data_type> *root;
 };
 
-template <class key_type, class data_type, template<class, class> class node_type>
-rb_tree<key_type, data_type, node_type>::rb_tree(node_type<key_type, data_type> *node_) {
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+rb_tree<key_type, data_type, node_type>::rb_tree(
+    node_type<key_type, data_type> *node_) {
   root = node_;
   if (root) {
     root->color = node_color::black;
@@ -153,7 +166,8 @@ rb_tree<key_type, data_type, node_type>::rb_tree(node_type<key_type, data_type> 
   }
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline short int rb_tree<key_type, data_type, node_type>::get_size_of(
     node_type<key_type, data_type> *node_) {
   short int sum = 0;
@@ -164,21 +178,18 @@ inline short int rb_tree<key_type, data_type, node_type>::get_size_of(
   return sum;
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
-inline key_type rb_tree<key_type, data_type, node_type>::split_(short int n_,
-                                                       rb_tree<key_type, data_type> *b_) {
-  // node_type<key_type, data_type>* tmp = s_->left;
-  //  assert(n_ < get_size_of(root));
-  auto s_ = nth(n_);
-  if (not s_) {
-    return NULL;
-  }
-  auto r_ = s_->data; // for return;
 
-  rb_tree<key_type, data_type> *s_tree = new rb_tree<key_type, data_type>(s_->left);
-  rb_tree<key_type, data_type> *b_tree = new rb_tree<key_type, data_type>(s_->right);
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline void
+rb_tree<key_type, data_type, node_type>::split_(node_type<key_type, data_type>* node_, rb_tree<key_type, data_type> *b_) {
+  assert(node_);
+  rb_tree<key_type, data_type> *s_tree =
+      new rb_tree<key_type, data_type>(node_->left);
+  rb_tree<key_type, data_type> *b_tree =
+      new rb_tree<key_type, data_type>(node_->right);
 
-  auto it_ = s_;
+  auto it_ = node_;
   // auto parent = nullptr;
   if (it_->parent) {
     split__(it_->parent, it_->is_left_child_of_parent(), s_tree, b_tree);
@@ -192,13 +203,29 @@ inline key_type rb_tree<key_type, data_type, node_type>::split_(short int n_,
   // delete it will cause some error some time
   // delete s_tree;
   delete b_tree;
-  return r_;
+  //return node_;
+}
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline node_type<key_type, data_type> *
+rb_tree<key_type, data_type, node_type>::split_(
+    short int n_, rb_tree<key_type, data_type> *b_) {
+  // node_type<key_type, data_type>* tmp = s_->left;
+  //  assert(n_ < get_size_of(root));
+  auto s_ = nth(n_);
+  if (not s_) {
+    return nullptr;
+  }
+  split_(s_, b_);
+  return s_;
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::split__(
     node_type<key_type, data_type> *node_, bool was_left,
-    rb_tree<key_type, data_type> *s_tree, rb_tree<key_type, data_type> *b_tree) {
+    rb_tree<key_type, data_type> *s_tree,
+    rb_tree<key_type, data_type> *b_tree) {
   bool cont_ = false, new_was_left;
   node_type<key_type, data_type> *gp;
   if (node_->parent) {
@@ -219,10 +246,10 @@ inline void rb_tree<key_type, data_type, node_type>::split__(
     split__(gp, new_was_left, s_tree, b_tree);
   }
 }
-template <class key_type, class data_type, template<class, class> class node_type>
-inline void
-rb_tree<key_type, data_type, node_type>::join_(node_type<key_type, data_type> *m_,
-                                     rb_tree<key_type, data_type> *b_) {
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline void rb_tree<key_type, data_type, node_type>::join_(
+    node_type<key_type, data_type> *m_, rb_tree<key_type, data_type> *b_) {
   m_->left = nullptr;
   m_->right = nullptr;
   m_->parent = nullptr;
@@ -301,7 +328,8 @@ rb_tree<key_type, data_type, node_type>::join_(node_type<key_type, data_type> *m
   }
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline node_type<key_type, data_type> *
 rb_tree<key_type, data_type, node_type>::nth(short int n) {
   // if((not root) or (n<0)) {
@@ -321,9 +349,10 @@ rb_tree<key_type, data_type, node_type>::nth(short int n) {
   return nullptr;
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
-inline void
-rb_tree<key_type, data_type, node_type>::destory_(node_type<key_type, data_type> *node_) {
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline void rb_tree<key_type, data_type, node_type>::destory_(
+    node_type<key_type, data_type> *node_) {
   if (node_->left) {
     destory_(node_->left);
   }
@@ -333,7 +362,8 @@ rb_tree<key_type, data_type, node_type>::destory_(node_type<key_type, data_type>
   delete node_;
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::update_left_size_(
     node_type<key_type, data_type> *node_, int sz) {
   // node_type<key_type, data_type> *it = node_;
@@ -345,7 +375,8 @@ inline void rb_tree<key_type, data_type, node_type>::update_left_size_(
   }
 }
 
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline node_type<key_type, data_type> *
 rb_tree<key_type, data_type, node_type>::sibling_of_(
     node_type<key_type, data_type> *node_) {
@@ -359,10 +390,15 @@ rb_tree<key_type, data_type, node_type>::sibling_of_(
 };
 
 // return min element in right subtree of node_
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline node_type<key_type, data_type> *
-rb_tree<key_type, data_type, node_type>::next_(node_type<key_type, data_type> *node_) {
-  assert(node_->right);
+rb_tree<key_type, data_type, node_type>::next_(
+    node_type<key_type, data_type> *node_) {
+  // assert(node_->right);
+  if(not node_->right) {
+    return nullptr;
+  }
   node_type<key_type, data_type> *min = node_->right;
   while (min->left) {
     min = min->left;
@@ -370,10 +406,15 @@ rb_tree<key_type, data_type, node_type>::next_(node_type<key_type, data_type> *n
   return min;
 };
 // return max element in left subtree of node_
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline node_type<key_type, data_type> *
-rb_tree<key_type, data_type, node_type>::prev_(node_type<key_type, data_type> *node_) {
-  assert(node_->left);
+rb_tree<key_type, data_type, node_type>::prev_(
+    node_type<key_type, data_type> *node_) {
+  // assert(node_->left);
+  if(not node_->left) {
+    return nullptr;
+  }
   node_type<key_type, data_type> *max = node_->left;
   while (max->right) {
     max = max->right;
@@ -381,12 +422,12 @@ rb_tree<key_type, data_type, node_type>::prev_(node_type<key_type, data_type> *n
   return max;
 };
 
-template <class key_type, class data_type, template<class, class> class node_type>
-inline void
-rb_tree<key_type, data_type, node_type>::delete_(node_type<key_type, data_type> *np) {
-  node_type<key_type, data_type> *r_ = search_(np);
-  if (not(r_->key == np->key)) {
-    return; // not found;
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline bool rb_tree<key_type, data_type, node_type>::delete_(key_type key) {
+  node_type<key_type, data_type> *r_ = search_(key);
+  if (not(r_->key == key)) {
+    return false; // not found;
   }
   if ((r_->left) && (r_->right)) {
     node_type<key_type, data_type> *prev_node = prev_(r_);
@@ -401,9 +442,11 @@ rb_tree<key_type, data_type, node_type>::delete_(node_type<key_type, data_type> 
     fix_delete_(r_, r_->parent, nullptr);
   }
   delete r_;
+  return true;
 };
 // if pod is not null, it can have at most 1 child;
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::fix_delete_(
     node_type<key_type, data_type> *dnode, node_type<key_type, data_type> *pod,
     node_type<key_type, data_type> *cod) {
@@ -668,7 +711,8 @@ inline void rb_tree<key_type, data_type, node_type>::fix_delete_(
  * update parent of old_node's left or right child ptr
  * set new_node as old_node's parent
  */
-template <class key_type, class data_type, template<class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::swap_parent_(
     node_type<key_type, data_type> *old_node,
     node_type<key_type, data_type> *new_node) {
@@ -697,7 +741,8 @@ inline void rb_tree<key_type, data_type, node_type>::swap_parent_(
  *           b   c                 a   b
  * y_after = y_before + x_before + 1
  */
-template <class key_type, class data_type, template <class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::left_rotate_(
     node_type<key_type, data_type> *lnode) {
   node_type<key_type, data_type> *rc = lnode->right;
@@ -718,7 +763,8 @@ inline void rb_tree<key_type, data_type, node_type>::left_rotate_(
  *       a   b                         b   c
  * y_before = x_before + y_after + 1
  */
-template <class key_type, class data_type, template <class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::right_rotate_(
     node_type<key_type, data_type> *rnode) {
   node_type<key_type, data_type> *lc = rnode->left;
@@ -731,16 +777,79 @@ inline void rb_tree<key_type, data_type, node_type>::right_rotate_(
   lc->right = rnode;
 }
 
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline void rb_tree<key_type, data_type, node_type>::search_range_(
+    std::vector<node_type<key_type, data_type>*>* rs,
+    node_type<key_type, data_type> *node_, key_type low, key_type high) {
+  if (node_) {
+    if (node_->key < low) {
+      search_range_(rs, node_->right, low, high);
+    } else if (node_->key > high) {
+      search_range_(rs, node_->left, low, high);
+    } else {
+      search_range_(rs, node_->left, low, node_->key);
+      //std::cout << node_->key << " " << node_->data << ";";
+      rs->push_back(node_);
+      search_range_(rs, node_->right, node_->key, high);
+    }
+  }
+}
 
-template <class key_type, class data_type, template <class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline std::vector<node_type<key_type, data_type>*>*
+rb_tree<key_type, data_type, node_type>::search_range(key_type low,
+                                                      key_type high) {
+  std::vector<node_type<key_type, data_type> *> *rs =
+      new std::vector<node_type<key_type, data_type> *>();
+  search_range_(rs, root, low, high);
+  return rs;
+}
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline data_type rb_tree<key_type, data_type, node_type>::search(key_type key) {
+  node_type<key_type, data_type> *it = root;
+  while (it) {
+    if (it->key == key) {
+      return it->data;
+    } else if (it->key < key) {
+      it = it->right;
+    } else {
+      it = it->left;
+    }
+  }
+  return NULL;
+}
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline node_type<key_type, data_type>*
+rb_tree<key_type, data_type, node_type>::search_eq_or_gt(key_type key) {
+  node_type<key_type, data_type> *it = root, *min_q = root;
+  while (it) {
+    if (it->key == key) {
+      return it;
+    } else if (it->key < key) {
+      min_q = it;
+      it = it->right;
+    } else {
+      min_q = it;
+      it = it->left;
+    }
+  }
+  return min_q;
+}
+
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline node_type<key_type, data_type> *
-rb_tree<key_type, data_type, node_type>::search_(node_type<key_type, data_type> *snode) {
+rb_tree<key_type, data_type, node_type>::search_(key_type key) {
   node_type<key_type, data_type> *it = root;
 
   while (true) {
-    if (it->key == snode->key) {
+    if (it->key == key) {
       break;
-    } else if (snode->key < it->key) {
+    } else if (key < it->key) {
       if (it->left) {
         it = it->left;
       } else {
@@ -758,26 +867,26 @@ rb_tree<key_type, data_type, node_type>::search_(node_type<key_type, data_type> 
   return it;
 }
 
-
-template <class key_type, class data_type, template <class, class> class node_type>
-inline void
-rb_tree<key_type, data_type, node_type>::insert_(node_type<key_type, data_type> *inode) {
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline bool rb_tree<key_type, data_type, node_type>::insert_(
+    node_type<key_type, data_type> *inode) {
   if (root == nullptr) {
     root = inode;
     root->color = node_color::black;
-    return;
+    return true;
   }
   auto tmp = root;
   auto parent = root;
   while (tmp) {
     parent = tmp;
     if (tmp->key == inode->key) {
-      if(tmp->data != inode->data) {
+      if (tmp->data != inode->data) {
         tmp->data = inode->data;
         // FIX ME with key-value data, DONE I THINK
         delete inode;
       }
-      return;
+      return false; // update value set as false, since no node added
     } else if (tmp->key < inode->key) {
       tmp = tmp->right;
     } else {
@@ -792,10 +901,11 @@ rb_tree<key_type, data_type, node_type>::insert_(node_type<key_type, data_type> 
   }
   update_left_size_(inode);
   fix_insert_(inode);
+  return true;
 };
 
-
-template <class key_type, class data_type, template <class, class> class node_type>
+template <class key_type, class data_type,
+          template <class, class> class node_type>
 inline void rb_tree<key_type, data_type, node_type>::fix_insert_(
     node_type<key_type, data_type> *node_) {
   if (node_ == root) {
@@ -911,23 +1021,26 @@ inline void rb_tree<key_type, data_type, node_type>::fix_insert_(
   }
 };
 
-template <class key_type, class data_type, template <class, class> class node_type>
-inline void rb_tree<key_type, data_type, node_type>::insert_(key_type key, data_type data) {
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline bool rb_tree<key_type, data_type, node_type>::insert_(key_type key,
+                                                             data_type data) {
   // FIX ME, memory leak when insert dup data;
-  node_type<key_type, data_type> *i = new node_type<key_type, data_type>(key, data);
+  node_type<key_type, data_type> *i =
+      new node_type<key_type, data_type>(key, data);
   // node_type<key_type, data_type> *ri =
-  insert_(i);
+  return insert_(i);
   // if(i) {
   //   update_left_size_(i);
   //   fix_insert_(i);
   // }
 };
 
-template <class key_type, class data_type, template <class, class> class node_type>
-inline void
-rb_tree<key_type, data_type, node_type>::copy_data_(node_type<key_type, data_type> *from,
-                                          node_type<key_type, data_type> *to) {
-  to->key = from->data;
+template <class key_type, class data_type,
+          template <class, class> class node_type>
+inline void rb_tree<key_type, data_type, node_type>::copy_data_(
+    node_type<key_type, data_type> *from, node_type<key_type, data_type> *to) {
+  to->key = from->key;
   to->data = from->data;
 }
 

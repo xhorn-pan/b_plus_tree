@@ -1,4 +1,4 @@
-#include "rb_tree_1.h"
+#include "rb_tree.h"
 #include <iostream>
 #include <cstdlib> /* srand, rand */
 #include <ctime>   /* time */

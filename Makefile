@@ -3,17 +3,17 @@
 #	Xinghua Pan (xi.pan@ufl.edu)
 #
 
-SRCS		= b_plus_tree.cc main.cc 
+SRCS		= bp_tree.cc main.cc 
 OBJS		= $(SRCS:.cc=.o)
-HEADERS		= b_plus_tree.h catch2.h stack.h
+HEADERS		= bp_tree.h catch2.h rb_tree.h
 OUT		= bplustree
-TEST_SRCS	= b_plus_tree_test.cc  stack_test.cc main_test.cc
+TEST_SRCS	= bp_tree_test.cc main_test.cc
 TEST_OBJS	= $(TEST_SRCS:.cc=.o)
 TEST_OUT	= runtest
 
 CC	 	= clang++
 FLAGS	 	= -std=c++14 -Wall -g #-Wextra -Werror
-LFLAGS	 	= #-lpthread
+LFLAGS	 	= -lpthread
 # -g option enables debugging mode 
 # -c flag generates object code for separate files
 

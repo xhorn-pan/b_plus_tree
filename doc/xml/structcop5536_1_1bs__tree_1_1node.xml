@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="structcop5536_1_1bs__tree_1_1node" kind="struct" language="C++" prot="protected">
+    <compoundname>cop5536::bs_tree::node</compoundname>
+    <includes refid="bs__tree_8h" local="no">bs_tree.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcop5536_1_1bs__tree_1_1node_1a6f6e6357e42e318a935f8dd6b004ee61" prot="public" static="no" mutable="no">
+        <type>TKey</type>
+        <definition>TKey cop5536::bs_tree&lt; TKey, TData &gt;::node::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="30" column="1" bodyfile="bs_tree.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classcop5536_1_1bs__tree_1af5f514c5755f311749be21d9870e9fdd" compoundref="bs__tree_8h" startline="12" endline="19">cop5536::bs_tree&lt; TKey, TData &gt;::search</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1ab4bf69a4420948537bcf08cd75ca5ef6" compoundref="bs__tree_8h" startline="20" endline="26">cop5536::bs_tree&lt; TKey, TData &gt;::delete_key</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a70260cd3a4b4c4be7daa51f88c4d823b" compoundref="bs__tree_8h" startline="44" endline="64">cop5536::bs_tree&lt; TKey, TData &gt;::search_</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1ac0ba71b38ec37b0e5c803493cc76291f" compoundref="bs__tree_8h" startline="66" endline="84">cop5536::bs_tree&lt; TKey, TData &gt;::insert__</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1aee65ab00e3f9829938b7b4b29e1c602e" compoundref="bs__tree_8h" startline="141" endline="162">cop5536::bs_tree&lt; TKey, TData &gt;::delete_phy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structcop5536_1_1bs__tree_1_1node_1abbd8b6e535115b439c7a82d84630712e" prot="public" static="no" mutable="no">
+        <type>TData</type>
+        <definition>TData cop5536::bs_tree&lt; TKey, TData &gt;::node::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="31" column="1" bodyfile="bs_tree.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classcop5536_1_1bs__tree_1af5f514c5755f311749be21d9870e9fdd" compoundref="bs__tree_8h" startline="12" endline="19">cop5536::bs_tree&lt; TKey, TData &gt;::search</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1ac0ba71b38ec37b0e5c803493cc76291f" compoundref="bs__tree_8h" startline="66" endline="84">cop5536::bs_tree&lt; TKey, TData &gt;::insert__</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1aee65ab00e3f9829938b7b4b29e1c602e" compoundref="bs__tree_8h" startline="141" endline="162">cop5536::bs_tree&lt; TKey, TData &gt;::delete_phy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structcop5536_1_1bs__tree_1_1node_1a1b932ce36acc5f6c7053973893680215" prot="public" static="no" mutable="no">
+        <type><ref refid="structcop5536_1_1bs__tree_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node* cop5536::bs_tree&lt; TKey, TData &gt;::node::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="32" column="1" bodyfile="bs_tree.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classcop5536_1_1bs__tree_1a70260cd3a4b4c4be7daa51f88c4d823b" compoundref="bs__tree_8h" startline="44" endline="64">cop5536::bs_tree&lt; TKey, TData &gt;::search_</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1ac0ba71b38ec37b0e5c803493cc76291f" compoundref="bs__tree_8h" startline="66" endline="84">cop5536::bs_tree&lt; TKey, TData &gt;::insert__</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a157533a5418d352c7901634e92878f9b" compoundref="bs__tree_8h" startline="109" endline="126">cop5536::bs_tree&lt; TKey, TData &gt;::cut_out</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a194d4e886f8b785a40b4c07f72242794" compoundref="bs__tree_8h" startline="128" endline="139">cop5536::bs_tree&lt; TKey, TData &gt;::find_largest_in_left_</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1aee65ab00e3f9829938b7b4b29e1c602e" compoundref="bs__tree_8h" startline="141" endline="162">cop5536::bs_tree&lt; TKey, TData &gt;::delete_phy</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a01789b2123992a3c40de722826e2b4fe" compoundref="bs__tree_8h" startline="164" endline="185">cop5536::bs_tree&lt; TKey, TData &gt;::left_rotate</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a6fc2f115939b640461d8ea2503dfa0a0" compoundref="bs__tree_8h" startline="186" endline="207">cop5536::bs_tree&lt; TKey, TData &gt;::right_rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structcop5536_1_1bs__tree_1_1node_1a8b340c3f73753c50fb4361351e13baaa" prot="public" static="no" mutable="no">
+        <type><ref refid="structcop5536_1_1bs__tree_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node* cop5536::bs_tree&lt; TKey, TData &gt;::node::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="33" column="1" bodyfile="bs_tree.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classcop5536_1_1bs__tree_1a70260cd3a4b4c4be7daa51f88c4d823b" compoundref="bs__tree_8h" startline="44" endline="64">cop5536::bs_tree&lt; TKey, TData &gt;::search_</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1ac0ba71b38ec37b0e5c803493cc76291f" compoundref="bs__tree_8h" startline="66" endline="84">cop5536::bs_tree&lt; TKey, TData &gt;::insert__</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a157533a5418d352c7901634e92878f9b" compoundref="bs__tree_8h" startline="109" endline="126">cop5536::bs_tree&lt; TKey, TData &gt;::cut_out</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a194d4e886f8b785a40b4c07f72242794" compoundref="bs__tree_8h" startline="128" endline="139">cop5536::bs_tree&lt; TKey, TData &gt;::find_largest_in_left_</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1aee65ab00e3f9829938b7b4b29e1c602e" compoundref="bs__tree_8h" startline="141" endline="162">cop5536::bs_tree&lt; TKey, TData &gt;::delete_phy</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a01789b2123992a3c40de722826e2b4fe" compoundref="bs__tree_8h" startline="164" endline="185">cop5536::bs_tree&lt; TKey, TData &gt;::left_rotate</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a6fc2f115939b640461d8ea2503dfa0a0" compoundref="bs__tree_8h" startline="186" endline="207">cop5536::bs_tree&lt; TKey, TData &gt;::right_rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structcop5536_1_1bs__tree_1_1node_1a037d5dc7cea3a2704cc41ff925fe829a" prot="public" static="no" mutable="no">
+        <type><ref refid="structcop5536_1_1bs__tree_1_1node" kindref="compound">node</ref> *</type>
+        <definition>node* cop5536::bs_tree&lt; TKey, TData &gt;::node::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="34" column="1" bodyfile="bs_tree.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classcop5536_1_1bs__tree_1ac0ba71b38ec37b0e5c803493cc76291f" compoundref="bs__tree_8h" startline="66" endline="84">cop5536::bs_tree&lt; TKey, TData &gt;::insert__</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a157533a5418d352c7901634e92878f9b" compoundref="bs__tree_8h" startline="109" endline="126">cop5536::bs_tree&lt; TKey, TData &gt;::cut_out</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a01789b2123992a3c40de722826e2b4fe" compoundref="bs__tree_8h" startline="164" endline="185">cop5536::bs_tree&lt; TKey, TData &gt;::left_rotate</referencedby>
+        <referencedby refid="classcop5536_1_1bs__tree_1a6fc2f115939b640461d8ea2503dfa0a0" compoundref="bs__tree_8h" startline="186" endline="207">cop5536::bs_tree&lt; TKey, TData &gt;::right_rotate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcop5536_1_1bs__tree_1_1node_1a5e2c008f6e40721e5f130580c6570714" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bs_tree&lt; TKey, TData &gt;::node::node</definition>
+        <argsstring>()</argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structcop5536_1_1bs__tree_1_1node_1a8b4098e4e31a51e4ec4499ee64236507" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bs_tree&lt; TKey, TData &gt;::node::node</definition>
+        <argsstring>(const TKey key, const TData data)</argsstring>
+        <name>node</name>
+        <param>
+          <type>const TKey</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const TData</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bs_tree.h" line="36" column="1" bodyfile="bs_tree.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="19">
+        <label>cop5536::bs_tree&lt; TKey, TData &gt;::node</label>
+        <link refid="structcop5536_1_1bs__tree_1_1node"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>right</edgelabel>
+          <edgelabel>left</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="bs_tree.h" line="29" column="1" bodyfile="bs_tree.h" bodystart="29" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1abbd8b6e535115b439c7a82d84630712e" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>data</name></member>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1a6f6e6357e42e318a935f8dd6b004ee61" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>key</name></member>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1a1b932ce36acc5f6c7053973893680215" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>left</name></member>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1a5e2c008f6e40721e5f130580c6570714" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>node</name></member>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1a8b4098e4e31a51e4ec4499ee64236507" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>node</name></member>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1a037d5dc7cea3a2704cc41ff925fe829a" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>parent</name></member>
+      <member refid="structcop5536_1_1bs__tree_1_1node_1a8b340c3f73753c50fb4361351e13baaa" prot="public" virt="non-virtual"><scope>cop5536::bs_tree::node</scope><name>right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

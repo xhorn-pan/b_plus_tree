@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classcop5536_1_1bp__node" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>cop5536::bp_node</compoundname>
+    <derivedcompoundref refid="classcop5536_1_1bp__node__i" prot="public" virt="non-virtual">cop5536::bp_node_i</derivedcompoundref>
+    <derivedcompoundref refid="classcop5536_1_1bp__node__l" prot="public" virt="non-virtual">cop5536::bp_node_l</derivedcompoundref>
+    <includes refid="bp__tree_8h" local="no">bp_tree.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcop5536_1_1bp__node_1a011a8dee13e3446bee783dd9afc33c11" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short cop5536::bp_node::node_size</definition>
+        <argsstring></argsstring>
+        <name>node_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="14" column="1" bodyfile="bp_tree.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" compoundref="bp__tree_8h" startline="133" endline="184">cop5536::bp_tree::insert</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a63a9361ef291e491b35eb5df49f67bce" compoundref="bp__tree_8h" startline="187" endline="211">cop5536::bp_node_i::insert_</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__l_1ab551cc0e4af968e84b9661c264fd1ece" compoundref="bp__tree_8h" startline="213" endline="223">cop5536::bp_node_l::insert_</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__l_1abdd4a62184d0220ef5904db44bff31fc" compoundref="bp__tree_8h" startline="225" endline="241">cop5536::bp_node_l::split</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a6610fa235f6f5f88c1189c7a340cc666" compoundref="bp__tree_8h" startline="243" endline="264">cop5536::bp_node_i::split</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__l_1a23c01342ecfd1430bbbbed3be25d8407" compoundref="bp__tree_8h" startline="266" endline="271">cop5536::bp_node_l::remove</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0" compoundref="bp__tree_8h" startline="273" endline="407">cop5536::bp_node_i::remove</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a57d4700fe3de996b564bde81197907f2" compoundref="bp__tree_8h" startline="514" endline="530">cop5536::bp_node_i::print</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__l_1a12982ece3c311e3ccf653a97d842f39f" compoundref="bp__tree_8h" startline="532" endline="541">cop5536::bp_node_l::print</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1ac2b250a3d444029d56ab3bf824058f0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bp_node::bp_node</definition>
+        <argsstring>()</argsstring>
+        <name>bp_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="16" column="1" bodyfile="bp_tree.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a317da750875d22031d8eaadce6f8d934" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bp_node::bp_node</definition>
+        <argsstring>(unsigned short ns)</argsstring>
+        <name>bp_node</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>ns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="17" column="1" bodyfile="bp_tree.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a0550a89be2909f9765f2db2598ed8f34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual cop5536::bp_node::~bp_node</definition>
+        <argsstring>()</argsstring>
+        <name>~bp_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="18" column="1" bodyfile="bp_tree.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1aa65afc4e5d7eaef471fce7e115a20b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void cop5536::bp_node::destory_</definition>
+        <argsstring>()=0</argsstring>
+        <name>destory_</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a326dcd8a485264d4154c567dbe4ac804">destory_</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1aa8cba478b36eb85737d4e769387ddc5f">destory_</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="19" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a326dcd8a485264d4154c567dbe4ac804" compoundref="bp__tree_8h" startline="112" endline="132">cop5536::bp_node_i::destory_</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a6f12a3668cc105cc1e7d87e1debafa82" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void cop5536::bp_node::print</definition>
+        <argsstring>()=0</argsstring>
+        <name>print</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a57d4700fe3de996b564bde81197907f2">print</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1a12982ece3c311e3ccf653a97d842f39f">print</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="20" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__tree_1a5098bb9c72750e80252595a707ad2470" compoundref="bp__tree_8h" startline="508" endline="513">cop5536::bp_tree::print</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a57d4700fe3de996b564bde81197907f2" compoundref="bp__tree_8h" startline="514" endline="530">cop5536::bp_node_i::print</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1ac0b53957714577d62b9452b8b5611182" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool cop5536::bp_node::is_leaf</definition>
+        <argsstring>()=0</argsstring>
+        <name>is_leaf</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a9d62d2e8e5b34abcb47aa2f17e1cbd99">is_leaf</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1a6e416d787a2fd3d236939b9ce44bed03">is_leaf</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="21" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a326dcd8a485264d4154c567dbe4ac804" compoundref="bp__tree_8h" startline="112" endline="132">cop5536::bp_node_i::destory_</referencedby>
+        <referencedby refid="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" compoundref="bp__tree_8h" startline="133" endline="184">cop5536::bp_tree::insert</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0" compoundref="bp__tree_8h" startline="273" endline="407">cop5536::bp_node_i::remove</referencedby>
+        <referencedby refid="classcop5536_1_1bp__tree_1a424febb6a1d7ce333d8713f43d9462a5" compoundref="bp__tree_8h" startline="409" endline="433">cop5536::bp_tree::remove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1ae7815123263e3baf4f1fb7e87775fe02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cop5536::bp_node::is_full</definition>
+        <argsstring>(unsigned short degree)</argsstring>
+        <name>is_full</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>degree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="22" column="1" bodyfile="bp_tree.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a0f2a0e453f61fdd8965329ecd00f9cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float cop5536::bp_node::search</definition>
+        <argsstring>(int key)=0</argsstring>
+        <name>search</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1ac3d6bfcfb39e3030b523f8276f19bec9">search</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1aaef458660fc157dbe47705075a2ea49f">search</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="24" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__node__i_1ac3d6bfcfb39e3030b523f8276f19bec9" compoundref="bp__tree_8h" startline="435" endline="442">cop5536::bp_node_i::search</referencedby>
+        <referencedby refid="classcop5536_1_1bp__tree_1ab19cba7e122848174579357585b43cb4" compoundref="bp__tree_8h" startline="482" endline="492">cop5536::bp_tree::search</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a11fbec69e8f4b5a6294a0cf7a1ce9ece" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; float &gt; *</type>
+        <definition>virtual std::vector&lt;float&gt;* cop5536::bp_node::search</definition>
+        <argsstring>(int low, int high)=0</argsstring>
+        <name>search</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a2f84bd7bdd54b0d33876b661ae864c8a">search</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1a85543d75788128dba421155d524be082">search</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1af3e0eedf3446b6f881f334cc57d42c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool cop5536::bp_node::remove</definition>
+        <argsstring>(int key)=0</argsstring>
+        <name>remove</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0">remove</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1a23c01342ecfd1430bbbbed3be25d8407">remove</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="26" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0" compoundref="bp__tree_8h" startline="273" endline="407">cop5536::bp_node_i::remove</referencedby>
+        <referencedby refid="classcop5536_1_1bp__tree_1a424febb6a1d7ce333d8713f43d9462a5" compoundref="bp__tree_8h" startline="409" endline="433">cop5536::bp_tree::remove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a90a56c05435eaed29592ccea0e8333b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool cop5536::bp_node::splitable</definition>
+        <argsstring>()</argsstring>
+        <name>splitable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="27" column="1" bodyfile="bp_tree.h" bodystart="27" bodyend="27"/>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0" compoundref="bp__tree_8h" startline="273" endline="407">cop5536::bp_node_i::remove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1a8db819103997a6e80e0f00558f596d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structcop5536_1_1rb__tree__node" kindref="compound">rb_tree_node</ref>&lt; int, <ref refid="classcop5536_1_1bp__node" kindref="compound">bp_node</ref> * &gt; *</type>
+        <definition>virtual rb_tree_node&lt;int, bp_node*&gt;* cop5536::bp_node::split</definition>
+        <argsstring>(bool is_left)=0</argsstring>
+        <name>split</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a6610fa235f6f5f88c1189c7a340cc666">split</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1abdd4a62184d0220ef5904db44bff31fc">split</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>is_left</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="28" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0" compoundref="bp__tree_8h" startline="273" endline="407">cop5536::bp_node_i::remove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__node_1afd68a9ff9b101e8f21d8a341827f4aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structcop5536_1_1rb__tree__node" kindref="compound">rb_tree_node</ref>&lt; int, <ref refid="classcop5536_1_1bp__node" kindref="compound">bp_node</ref> * &gt; *</type>
+        <definition>virtual rb_tree_node&lt;int, bp_node *&gt;* cop5536::bp_node::insert_</definition>
+        <argsstring>(int key, float value, unsigned short degree)=0</argsstring>
+        <name>insert_</name>
+        <reimplementedby refid="classcop5536_1_1bp__node__i_1a63a9361ef291e491b35eb5df49f67bce">insert_</reimplementedby>
+        <reimplementedby refid="classcop5536_1_1bp__node__l_1ab551cc0e4af968e84b9661c264fd1ece">insert_</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>degree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="30" column="1"/>
+        <referencedby refid="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" compoundref="bp__tree_8h" startline="133" endline="184">cop5536::bp_tree::insert</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__i_1a63a9361ef291e491b35eb5df49f67bce" compoundref="bp__tree_8h" startline="187" endline="211">cop5536::bp_node_i::insert_</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>cop5536::bp_node</label>
+        <link refid="classcop5536_1_1bp__node"/>
+      </node>
+      <node id="1">
+        <label>cop5536::bp_node_i</label>
+        <link refid="classcop5536_1_1bp__node__i"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cop5536::bp_node_l</label>
+        <link refid="classcop5536_1_1bp__node__l"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="bp_tree.h" line="12" column="1" bodyfile="bp_tree.h" bodystart="12" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classcop5536_1_1bp__node_1ac2b250a3d444029d56ab3bf824058f0e" prot="public" virt="non-virtual"><scope>cop5536::bp_node</scope><name>bp_node</name></member>
+      <member refid="classcop5536_1_1bp__node_1a317da750875d22031d8eaadce6f8d934" prot="public" virt="non-virtual"><scope>cop5536::bp_node</scope><name>bp_node</name></member>
+      <member refid="classcop5536_1_1bp__node_1aa65afc4e5d7eaef471fce7e115a20b8f" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>destory_</name></member>
+      <member refid="classcop5536_1_1bp__node_1afd68a9ff9b101e8f21d8a341827f4aad" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>insert_</name></member>
+      <member refid="classcop5536_1_1bp__node_1ae7815123263e3baf4f1fb7e87775fe02" prot="public" virt="non-virtual"><scope>cop5536::bp_node</scope><name>is_full</name></member>
+      <member refid="classcop5536_1_1bp__node_1ac0b53957714577d62b9452b8b5611182" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>is_leaf</name></member>
+      <member refid="classcop5536_1_1bp__node_1a011a8dee13e3446bee783dd9afc33c11" prot="public" virt="non-virtual"><scope>cop5536::bp_node</scope><name>node_size</name></member>
+      <member refid="classcop5536_1_1bp__node_1a6f12a3668cc105cc1e7d87e1debafa82" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>print</name></member>
+      <member refid="classcop5536_1_1bp__node_1af3e0eedf3446b6f881f334cc57d42c05" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>remove</name></member>
+      <member refid="classcop5536_1_1bp__node_1a0f2a0e453f61fdd8965329ecd00f9cd3" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>search</name></member>
+      <member refid="classcop5536_1_1bp__node_1a11fbec69e8f4b5a6294a0cf7a1ce9ece" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>search</name></member>
+      <member refid="classcop5536_1_1bp__node_1a8db819103997a6e80e0f00558f596d07" prot="public" virt="pure-virtual"><scope>cop5536::bp_node</scope><name>split</name></member>
+      <member refid="classcop5536_1_1bp__node_1a90a56c05435eaed29592ccea0e8333b0" prot="public" virt="virtual"><scope>cop5536::bp_node</scope><name>splitable</name></member>
+      <member refid="classcop5536_1_1bp__node_1a0550a89be2909f9765f2db2598ed8f34" prot="public" virt="virtual"><scope>cop5536::bp_node</scope><name>~bp_node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

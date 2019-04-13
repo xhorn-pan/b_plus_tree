@@ -1,0 +1,254 @@
+\section{cop5536\+::bp\+\_\+node\+\_\+l Class Reference}
+\label{classcop5536_1_1bp__node__l}\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+
+
+{\ttfamily \#include $<$bp\+\_\+tree.\+h$>$}
+
+
+
+Inheritance diagram for cop5536\+::bp\+\_\+node\+\_\+l\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classcop5536_1_1bp__node__l__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cop5536\+::bp\+\_\+node\+\_\+l\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classcop5536_1_1bp__node__l__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ bp\+\_\+node\+\_\+l} ()
+\item 
+\textbf{ bp\+\_\+node\+\_\+l} (unsigned short ns, \textbf{ rb\+\_\+tree}$<$ int, float $>$ $\ast$ds)
+\item 
+virtual void \textbf{ print} () override
+\item 
+virtual bool \textbf{ is\+\_\+leaf} () override
+\item 
+virtual float \textbf{ search} (int key) override
+\item 
+virtual std\+::vector$<$ float $>$ $\ast$ \textbf{ search} (int low, int high) override
+\item 
+virtual \textbf{ $\sim$bp\+\_\+node\+\_\+l} () override
+\item 
+virtual void \textbf{ destory\+\_\+} () override
+\item 
+virtual bool \textbf{ remove} (int key) override
+\item 
+virtual \textbf{ rb\+\_\+tree\+\_\+node}$<$ int, \textbf{ bp\+\_\+node} $\ast$ $>$ $\ast$ \textbf{ split} (bool is\+\_\+left) override
+\item 
+virtual \textbf{ rb\+\_\+tree\+\_\+node}$<$ int, \textbf{ bp\+\_\+node} $\ast$ $>$ $\ast$ \textbf{ insert\+\_\+} (int key, float value, unsigned short degree) override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ rb\+\_\+tree}$<$ int, float $>$ $\ast$ \textbf{ data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classcop5536_1_1bp__node__l_a6ffb52ac4bec5ddc89cce27a1d218fd4}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!bp\_node\_l@{bp\_node\_l}}
+\index{bp\_node\_l@{bp\_node\_l}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{bp\_node\_l()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cop5536\+::bp\+\_\+node\+\_\+l\+::bp\+\_\+node\+\_\+l (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1bp__node__l_a6ffb52ac4bec5ddc89cce27a1d218fd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_a14d78ee51c1a822dc78799110ec05a0a}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!bp\_node\_l@{bp\_node\_l}}
+\index{bp\_node\_l@{bp\_node\_l}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{bp\_node\_l()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cop5536\+::bp\+\_\+node\+\_\+l\+::bp\+\_\+node\+\_\+l (\begin{DoxyParamCaption}\item[{unsigned short}]{ns,  }\item[{\textbf{ rb\+\_\+tree}$<$ int, float $>$ $\ast$}]{ds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\label{classcop5536_1_1bp__node__l_aeb42caefa39b462bb7fae5c7227f9280}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!````~bp\_node\_l@{$\sim$bp\_node\_l}}
+\index{````~bp\_node\_l@{$\sim$bp\_node\_l}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{$\sim$bp\_node\_l()}
+{\footnotesize\ttfamily virtual cop5536\+::bp\+\_\+node\+\_\+l\+::$\sim$bp\+\_\+node\+\_\+l (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classcop5536_1_1bp__node__l_aeb42caefa39b462bb7fae5c7227f9280_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classcop5536_1_1bp__node__l_aa8cba478b36eb85737d4e769387ddc5f}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!destory\_@{destory\_}}
+\index{destory\_@{destory\_}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{destory\_()}
+{\footnotesize\ttfamily void cop5536\+::bp\+\_\+node\+\_\+l\+::destory\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_aa65afc4e5d7eaef471fce7e115a20b8f}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classcop5536_1_1bp__node__l_aa8cba478b36eb85737d4e769387ddc5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_ab551cc0e4af968e84b9661c264fd1ece}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!insert\_@{insert\_}}
+\index{insert\_@{insert\_}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{insert\_()}
+{\footnotesize\ttfamily \textbf{ rb\+\_\+tree\+\_\+node}$<$ int, \textbf{ bp\+\_\+node} $\ast$ $>$ $\ast$ cop5536\+::bp\+\_\+node\+\_\+l\+::insert\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{float}]{value,  }\item[{unsigned short}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_afd68a9ff9b101e8f21d8a341827f4aad}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1bp__node__l_ab551cc0e4af968e84b9661c264fd1ece_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_a6e416d787a2fd3d236939b9ce44bed03}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!is\_leaf@{is\_leaf}}
+\index{is\_leaf@{is\_leaf}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{is\_leaf()}
+{\footnotesize\ttfamily virtual bool cop5536\+::bp\+\_\+node\+\_\+l\+::is\+\_\+leaf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_ac0b53957714577d62b9452b8b5611182}.
+
+\mbox{\label{classcop5536_1_1bp__node__l_a12982ece3c311e3ccf653a97d842f39f}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!print@{print}}
+\index{print@{print}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{print()}
+{\footnotesize\ttfamily void cop5536\+::bp\+\_\+node\+\_\+l\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_a6f12a3668cc105cc1e7d87e1debafa82}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1bp__node__l_a12982ece3c311e3ccf653a97d842f39f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_a23c01342ecfd1430bbbbed3be25d8407}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!remove@{remove}}
+\index{remove@{remove}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{remove()}
+{\footnotesize\ttfamily bool cop5536\+::bp\+\_\+node\+\_\+l\+::remove (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_af3e0eedf3446b6f881f334cc57d42c05}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1bp__node__l_a23c01342ecfd1430bbbbed3be25d8407_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_aaef458660fc157dbe47705075a2ea49f}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!search@{search}}
+\index{search@{search}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{search()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float cop5536\+::bp\+\_\+node\+\_\+l\+::search (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_a0f2a0e453f61fdd8965329ecd00f9cd3}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classcop5536_1_1bp__node__l_aaef458660fc157dbe47705075a2ea49f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_a85543d75788128dba421155d524be082}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!search@{search}}
+\index{search@{search}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{search()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ $\ast$ cop5536\+::bp\+\_\+node\+\_\+l\+::search (\begin{DoxyParamCaption}\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_a11fbec69e8f4b5a6294a0cf7a1ce9ece}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classcop5536_1_1bp__node__l_a85543d75788128dba421155d524be082_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1bp__node__l_abdd4a62184d0220ef5904db44bff31fc}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!split@{split}}
+\index{split@{split}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{split()}
+{\footnotesize\ttfamily \textbf{ rb\+\_\+tree\+\_\+node}$<$ int, \textbf{ bp\+\_\+node} $\ast$ $>$ $\ast$ cop5536\+::bp\+\_\+node\+\_\+l\+::split (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ cop5536\+::bp\+\_\+node} \doxyref{}{p.}{classcop5536_1_1bp__node_a8db819103997a6e80e0f00558f596d07}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classcop5536_1_1bp__node__l_abdd4a62184d0220ef5904db44bff31fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classcop5536_1_1bp__node__l_abdd4a62184d0220ef5904db44bff31fc_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classcop5536_1_1bp__node__l_a24a25b19ac46487f9654089e96fae604}} 
+\index{cop5536::bp\_node\_l@{cop5536::bp\_node\_l}!data@{data}}
+\index{data@{data}!cop5536::bp\_node\_l@{cop5536::bp\_node\_l}}
+\subsubsection{data}
+{\footnotesize\ttfamily \textbf{ rb\+\_\+tree}$<$int, float$>$$\ast$ cop5536\+::bp\+\_\+node\+\_\+l\+::data}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ bp\+\_\+tree.\+h}\end{DoxyCompactItemize}

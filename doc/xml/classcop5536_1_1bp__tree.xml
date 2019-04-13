@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classcop5536_1_1bp__tree" kind="class" language="C++" prot="public">
+    <compoundname>cop5536::bp_tree</compoundname>
+    <includes refid="bp__tree_8h" local="no">bp_tree.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcop5536_1_1bp__tree_1ae12dfa8c99394933b6c3116ef5c5c5c1" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream cop5536::bp_tree::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="104" column="1" bodyfile="bp_tree.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcop5536_1_1bp__tree_1a98e556c290193a7ac74bac340a4498ed" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short cop5536::bp_tree::degree</definition>
+        <argsstring></argsstring>
+        <name>degree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="105" column="1" bodyfile="bp_tree.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcop5536_1_1bp__tree_1aa7d3c5fc24b50b5e9019981a6de3163f" prot="private" static="no" mutable="no">
+        <type><ref refid="classcop5536_1_1bp__node" kindref="compound">bp_node</ref> *</type>
+        <definition>bp_node* cop5536::bp_tree::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="106" column="1" bodyfile="bp_tree.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1a8f2aa475cf2dccb634015fb983fe8b33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bp_tree::bp_tree</definition>
+        <argsstring>()</argsstring>
+        <name>bp_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="81" column="1" bodyfile="bp_tree.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1af238ca743991e869f91e940f34da5090" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bp_tree::bp_tree</definition>
+        <argsstring>(unsigned short m)</argsstring>
+        <name>bp_tree</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="82" column="1" bodyfile="bp_tree.h" bodystart="82" bodyend="87"/>
+        <references refid="classcop5536_1_1bp__tree_1aedfc108a47c4c0fccba58e0fbe4afc85" compoundref="bp__tree_8h" startline="97" endline="99">open_output</references>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1a411c9b8fe2d574fd544c45ab1556f9d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::bp_tree::~bp_tree</definition>
+        <argsstring>()</argsstring>
+        <name>~bp_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="88" column="1" bodyfile="bp_tree.h" bodystart="88" bodyend="91"/>
+        <references refid="classcop5536_1_1bp__tree_1ada822d6bb72e15c4ba6f9c2848fb883c" compoundref="bp__tree_8h" startline="100" endline="102">close_output</references>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::insert</definition>
+        <argsstring>(int key, float value)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="92" column="1" bodyfile="bp_tree.h" bodystart="133" bodyend="184"/>
+        <references refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" compoundref="rb__tree_8h" startline="72" endline="72">cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::insert</references>
+        <references refid="classcop5536_1_1bp__node_1ac0b53957714577d62b9452b8b5611182">cop5536::bp_node::is_leaf</references>
+        <references refid="classcop5536_1_1bp__node_1afd68a9ff9b101e8f21d8a341827f4aad">cop5536::bp_node::insert_</references>
+        <references refid="classcop5536_1_1bp__node__i_1a84be8cb1326c5cf21f73859fee0f78d0" compoundref="bp__tree_8h" startline="54">cop5536::bp_node_i::children</references>
+        <references refid="structcop5536_1_1rb__tree__node_1aa976b5b194ebbd5d0a1542febc9578aa" compoundref="rb__tree_8h" startline="22">cop5536::rb_tree_node&lt; key_type, data_type &gt;::key</references>
+        <references refid="classcop5536_1_1bp__node__i_1a01e9ecddf0de428590924058d4a395b7" compoundref="bp__tree_8h" startline="53">cop5536::bp_node_i::first_child</references>
+        <references refid="structcop5536_1_1rb__tree__node_1a75876fa1d1523c169440561c015767cf" compoundref="rb__tree_8h" startline="23">cop5536::rb_tree_node&lt; key_type, data_type &gt;::data</references>
+        <references refid="classcop5536_1_1bp__node_1a011a8dee13e3446bee783dd9afc33c11" compoundref="bp__tree_8h" startline="14">cop5536::bp_node::node_size</references>
+        <references refid="classcop5536_1_1bp__node__i_1a6610fa235f6f5f88c1189c7a340cc666" compoundref="bp__tree_8h" startline="243" endline="264">cop5536::bp_node_i::split</references>
+        <referencedby refid="bp__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="bp__main_8cc" startline="8" endline="37">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1ab19cba7e122848174579357585b43cb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::search</definition>
+        <argsstring>(int key)</argsstring>
+        <name>search</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="93" column="1" bodyfile="bp_tree.h" bodystart="482" bodyend="492"/>
+        <references refid="classcop5536_1_1bp__node_1a0f2a0e453f61fdd8965329ecd00f9cd3">cop5536::bp_node::search</references>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="9" endline="86">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1afdd6e5e9febb1a2e60d993efb8aed048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::search</definition>
+        <argsstring>(int low, int high)</argsstring>
+        <name>search</name>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="94" column="1" bodyfile="bp_tree.h" bodystart="494" bodyend="506"/>
+        <references refid="classcop5536_1_1bp__node_1a0f2a0e453f61fdd8965329ecd00f9cd3">cop5536::bp_node::search</references>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1a424febb6a1d7ce333d8713f43d9462a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::remove</definition>
+        <argsstring>(int key)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="95" column="1" bodyfile="bp_tree.h" bodystart="409" bodyend="433"/>
+        <references refid="classcop5536_1_1bp__node_1ac0b53957714577d62b9452b8b5611182">cop5536::bp_node::is_leaf</references>
+        <references refid="classcop5536_1_1bp__node__l_1a24a25b19ac46487f9654089e96fae604" compoundref="bp__tree_8h" startline="75">cop5536::bp_node_l::data</references>
+        <references refid="classcop5536_1_1rb__tree_1a25a915e3c06cbfb3d09c3ffd4fb26f82" compoundref="rb__tree_8h" startline="105" endline="105">cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::delete_key</references>
+        <references refid="classcop5536_1_1bp__node__i_1a84be8cb1326c5cf21f73859fee0f78d0" compoundref="bp__tree_8h" startline="54">cop5536::bp_node_i::children</references>
+        <references refid="structcop5536_1_1rb__tree__node_1aa976b5b194ebbd5d0a1542febc9578aa" compoundref="rb__tree_8h" startline="22">cop5536::rb_tree_node&lt; key_type, data_type &gt;::key</references>
+        <references refid="classcop5536_1_1bp__node__i_1a01e9ecddf0de428590924058d4a395b7" compoundref="bp__tree_8h" startline="53">cop5536::bp_node_i::first_child</references>
+        <references refid="structcop5536_1_1rb__tree__node_1a75876fa1d1523c169440561c015767cf" compoundref="rb__tree_8h" startline="23">cop5536::rb_tree_node&lt; key_type, data_type &gt;::data</references>
+        <references refid="classcop5536_1_1bp__node_1af3e0eedf3446b6f881f334cc57d42c05">cop5536::bp_node::remove</references>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1a5098bb9c72750e80252595a707ad2470" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="96" column="1" bodyfile="bp_tree.h" bodystart="508" bodyend="513"/>
+        <references refid="classcop5536_1_1bp__node_1a6f12a3668cc105cc1e7d87e1debafa82">cop5536::bp_node::print</references>
+        <referencedby refid="bp__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="bp__main_8cc" startline="8" endline="37">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1aedfc108a47c4c0fccba58e0fbe4afc85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::open_output</definition>
+        <argsstring>()</argsstring>
+        <name>open_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="97" column="1" bodyfile="bp_tree.h" bodystart="97" bodyend="99"/>
+        <references refid="bp__tree_8h_1a61a3c9a18380aafb6e430e79bf596557" compoundref="bp__tree_8h" startline="9">OUTPUT</references>
+        <referencedby refid="classcop5536_1_1bp__tree_1af238ca743991e869f91e940f34da5090" compoundref="bp__tree_8h" startline="82" endline="87">bp_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1bp__tree_1ada822d6bb72e15c4ba6f9c2848fb883c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::bp_tree::close_output</definition>
+        <argsstring>()</argsstring>
+        <name>close_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bp_tree.h" line="100" column="1" bodyfile="bp_tree.h" bodystart="100" bodyend="102"/>
+        <referencedby refid="classcop5536_1_1bp__tree_1a411c9b8fe2d574fd544c45ab1556f9d5" compoundref="bp__tree_8h" startline="88" endline="91">~bp_tree</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="bp_tree.h" line="79" column="1" bodyfile="bp_tree.h" bodystart="79" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classcop5536_1_1bp__tree_1a8f2aa475cf2dccb634015fb983fe8b33" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>bp_tree</name></member>
+      <member refid="classcop5536_1_1bp__tree_1af238ca743991e869f91e940f34da5090" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>bp_tree</name></member>
+      <member refid="classcop5536_1_1bp__tree_1ada822d6bb72e15c4ba6f9c2848fb883c" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>close_output</name></member>
+      <member refid="classcop5536_1_1bp__tree_1a98e556c290193a7ac74bac340a4498ed" prot="private" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>degree</name></member>
+      <member refid="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>insert</name></member>
+      <member refid="classcop5536_1_1bp__tree_1aedfc108a47c4c0fccba58e0fbe4afc85" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>open_output</name></member>
+      <member refid="classcop5536_1_1bp__tree_1ae12dfa8c99394933b6c3116ef5c5c5c1" prot="private" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>output</name></member>
+      <member refid="classcop5536_1_1bp__tree_1a5098bb9c72750e80252595a707ad2470" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>print</name></member>
+      <member refid="classcop5536_1_1bp__tree_1a424febb6a1d7ce333d8713f43d9462a5" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>remove</name></member>
+      <member refid="classcop5536_1_1bp__tree_1aa7d3c5fc24b50b5e9019981a6de3163f" prot="private" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>root</name></member>
+      <member refid="classcop5536_1_1bp__tree_1ab19cba7e122848174579357585b43cb4" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>search</name></member>
+      <member refid="classcop5536_1_1bp__tree_1afdd6e5e9febb1a2e60d993efb8aed048" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>search</name></member>
+      <member refid="classcop5536_1_1bp__tree_1a411c9b8fe2d574fd544c45ab1556f9d5" prot="public" virt="non-virtual"><scope>cop5536::bp_tree</scope><name>~bp_tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

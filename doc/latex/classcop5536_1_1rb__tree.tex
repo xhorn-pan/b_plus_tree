@@ -1,0 +1,482 @@
+\section{cop5536\+::rb\+\_\+tree$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$ Class Template Reference}
+\label{classcop5536_1_1rb__tree}\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+
+
+{\ttfamily \#include $<$rb\+\_\+tree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ rb\+\_\+tree} ()
+\item 
+\textbf{ rb\+\_\+tree} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$o)
+\item 
+\textbf{ rb\+\_\+tree} (const \textbf{ rb\+\_\+tree} \&o)
+\item 
+virtual \textbf{ $\sim$rb\+\_\+tree} ()
+\item 
+bool \textbf{ insert} (key\+\_\+type key, data\+\_\+type data)
+\item 
+void \textbf{ print\+\_\+tree} ()
+\item 
+void \textbf{ print\+\_\+node} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+, int space)
+\item 
+void \textbf{ get\+\_\+keys} (std\+::vector$<$ key\+\_\+type $>$ \&vec)
+\item 
+void \textbf{ get\+\_\+keys\+\_\+\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+, std\+::vector$<$ key\+\_\+type $>$ \&vec)
+\item 
+bool \textbf{ delete\+\_\+key} (key\+\_\+type key)
+\item 
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ nth} (short int n)
+\item 
+void \textbf{ join\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$m\+\_\+, \textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$b\+\_\+)
+\item 
+short int \textbf{ get\+\_\+size\+\_\+of} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ split\+\_\+} (short int n\+\_\+, \textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$b\+\_\+)
+\item 
+void \textbf{ split\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+, \textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$b\+\_\+)
+\item 
+data\+\_\+type \textbf{ search} (key\+\_\+type key)
+\item 
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ search\+\_\+eq\+\_\+or\+\_\+gt} (key\+\_\+type key)
+\item 
+std\+::vector$<$ node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ $>$ $\ast$ \textbf{ search\+\_\+range} (key\+\_\+type low, key\+\_\+type high)
+\item 
+bool \textbf{ insert\+\_\+} (key\+\_\+type key, data\+\_\+type data)
+\item 
+bool \textbf{ insert\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$inode)
+\item 
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ sibling\+\_\+of\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ next\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ prev\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+void \textbf{ cut\+\_\+out\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$cnode, node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$child\+\_\+of\+\_\+)
+\item 
+void \textbf{ swap\+\_\+parent\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$old\+\_\+node, node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$new\+\_\+node)
+\item 
+void \textbf{ left\+\_\+rotate\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$lnode)
+\item 
+void \textbf{ right\+\_\+rotate\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$rnode)
+\item 
+virtual void \textbf{ copy\+\_\+data\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$from, node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$to)
+\item 
+virtual node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ search\+\_\+} (key\+\_\+type key)
+\item 
+virtual bool \textbf{ delete\+\_\+} (key\+\_\+type key)
+\item 
+void \textbf{ destory\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+void \textbf{ update\+\_\+left\+\_\+size\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+, int sz=1)
+\item 
+void \textbf{ fix\+\_\+insert\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+bool \textbf{ is\+\_\+red\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+)
+\item 
+void \textbf{ fix\+\_\+delete\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$dnode, node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$pod, node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$cod)
+\item 
+void \textbf{ search\+\_\+range\+\_\+} (std\+::vector$<$ node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ $>$ $\ast$rs, node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+, key\+\_\+type low, key\+\_\+type high)
+\item 
+void \textbf{ split\+\_\+\+\_\+} (node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$node\+\_\+, bool was\+\_\+left, \textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$s\+\_\+tree, \textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$b\+\_\+tree)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classcop5536_1_1rb__tree_adcd88c0e48e263a07d944b78a5d40ac1}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!rb\_tree@{rb\_tree}}
+\index{rb\_tree@{rb\_tree}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{rb\_tree()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+\textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::\textbf{ rb\+\_\+tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a83cacee524e3d572a88bfc096e32b59d}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!rb\_tree@{rb\_tree}}
+\index{rb\_tree@{rb\_tree}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{rb\_tree()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+\textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::\textbf{ rb\+\_\+tree} (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a35e4d3f5788351f4d7d4086bfb8f31d2}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!rb\_tree@{rb\_tree}}
+\index{rb\_tree@{rb\_tree}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{rb\_tree()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+\textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::\textbf{ rb\+\_\+tree} (\begin{DoxyParamCaption}\item[{const \textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$ \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_ad9ad1368b9fa7f6d2490855182ba4044}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!````~rb\_tree@{$\sim$rb\_tree}}
+\index{````~rb\_tree@{$\sim$rb\_tree}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{$\sim$rb\_tree()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+virtual \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::$\sim$\textbf{ rb\+\_\+tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classcop5536_1_1rb__tree_ae0a0258360bc0222fa84f380e799c813}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!copy\_data\_@{copy\_data\_}}
+\index{copy\_data\_@{copy\_data\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{copy\_data\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::copy\+\_\+data\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{from,  }\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_aa3fbcedf69c1875064fbb6b2befd74bf}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!cut\_out\_@{cut\_out\_}}
+\index{cut\_out\_@{cut\_out\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{cut\_out\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::cut\+\_\+out\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{cnode,  }\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{child\+\_\+of\+\_\+ }\end{DoxyParamCaption})}
+
+\mbox{\label{classcop5536_1_1rb__tree_a82fcc1eec04d1c16b384aba305fd23f5}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!delete\_@{delete\_}}
+\index{delete\_@{delete\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{delete\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type , template$<$ class, class $>$ class node\+\_\+type$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::delete\+\_\+ (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_a82fcc1eec04d1c16b384aba305fd23f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a25a915e3c06cbfb3d09c3ffd4fb26f82}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!delete\_key@{delete\_key}}
+\index{delete\_key@{delete\_key}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{delete\_key()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::delete\+\_\+key (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_a25a915e3c06cbfb3d09c3ffd4fb26f82_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a9e04d56dd575295b1e01e015aac1f76b}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!destory\_@{destory\_}}
+\index{destory\_@{destory\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{destory\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::destory\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_a9e04d56dd575295b1e01e015aac1f76b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a40e5cba3e23f6e25c330ed16cb9e4943}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!fix\_delete\_@{fix\_delete\_}}
+\index{fix\_delete\_@{fix\_delete\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{fix\_delete\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::fix\+\_\+delete\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{dnode,  }\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{pod,  }\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{cod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a8c4eb96c329545e4056788be0511cd17}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!fix\_insert\_@{fix\_insert\_}}
+\index{fix\_insert\_@{fix\_insert\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{fix\_insert\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::fix\+\_\+insert\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+type X\+Yr $\vert$ $\vert$$\vert$ gp[x] gp[x+1] // \textbackslash{} / \textbackslash{} (parent)pp d(uncle) pp d[x] // [x] // (node) p[x] p[x] no rotate, no left\+\_\+size change rank change\+: gp(+1) color change\+: pp(r=$>$b), d(r=$>$b), gp(b=$>$r) continue fix on gp(uncle-\/$>$parent)
+
+$\vert$ $\vert$ (gp) z y // \textbackslash{} // \textbackslash{} y d =====$>$ x z // \textbackslash{} / \textbackslash{} / \textbackslash{} (node\+\_\+) x c a b c d / \textbackslash{} a b right rotate (gp), rank unchange color change, y, gp left\+\_\+size change\+: z z\+\_\+before = z\+\_\+after + y\+\_\+before + 1
+
+$\vert$ $\vert$ $\vert$ (gp) z z x / \textbackslash{} / \textbackslash{} // \textbackslash{} a y ====$>$ a x ====$>$ z y // \textbackslash{} / \textbackslash{} / \textbackslash{} / \textbackslash{} (node\+\_\+) x d b y a b c d / \textbackslash{} / \textbackslash{} b c c d right rotate(y), left rotate(z) rank unchange color change z, x left size change\+: x, y x\+\_\+after = x\+\_\+before + z\+\_\+before + 1 y\+\_\+before = x\+\_\+before + y\+\_\+after + 1
+
+L\+Rb $\vert$ $\vert$ $\vert$ (gp) z z x // \textbackslash{} // \textbackslash{} // \textbackslash{} y d =====$>$ x d ====$>$ y z / \textbackslash{} // \textbackslash{} / \textbackslash{} / \textbackslash{} a x (node\+\_\+) y c a b c d / \textbackslash{} / \textbackslash{} b c a b left rotate(y), right rotate(z) rank unchange color change z, x left size change\+: x, z x\+\_\+after = x\+\_\+before + y\+\_\+before + 1 z\+\_\+before = x\+\_\+before + z\+\_\+after + y\+\_\+before + 2
+
+R\+Rb $\vert$ $\vert$ (gp) z y / \textbackslash{} // \textbackslash{} a y =====$>$ z x / \textbackslash{} / \textbackslash{} / \textbackslash{} b x (node\+\_\+) a b c d / \textbackslash{} c d left rotate (gp) rank unchange color change, y, gp left\+\_\+size change\+: y y\+\_\+after = y\+\_\+before + z\+\_\+before + 1Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classcop5536_1_1rb__tree_a8c4eb96c329545e4056788be0511cd17_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_ac1b1dd54468fce3724d2e6b4205e0672}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!get\_keys@{get\_keys}}
+\index{get\_keys@{get\_keys}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{get\_keys()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::get\+\_\+keys (\begin{DoxyParamCaption}\item[{std\+::vector$<$ key\+\_\+type $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_aefd87c14dbf669cbd964b69112d1b553}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!get\_keys\_\_@{get\_keys\_\_}}
+\index{get\_keys\_\_@{get\_keys\_\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{get\_keys\_\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::get\+\_\+keys\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+,  }\item[{std\+::vector$<$ key\+\_\+type $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classcop5536_1_1rb__tree_aefd87c14dbf669cbd964b69112d1b553_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a675b0beb2560be3caef4001ac079d605}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!get\_size\_of@{get\_size\_of}}
+\index{get\_size\_of@{get\_size\_of}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{get\_size\_of()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+short int \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::get\+\_\+size\+\_\+of (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_af6623f271ebac00dd2b9dc525a21f04b}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!insert@{insert}}
+\index{insert@{insert}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{insert()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::insert (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key,  }\item[{data\+\_\+type}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_af6623f271ebac00dd2b9dc525a21f04b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a7a5907ab99800b3fdf73fdaa4d92e57a}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!insert\_@{insert\_}}
+\index{insert\_@{insert\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{insert\_()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::insert\+\_\+ (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key,  }\item[{data\+\_\+type}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_a7a5907ab99800b3fdf73fdaa4d92e57a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a52941f6d690d7be0ee5a8d91247d7e05}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!insert\_@{insert\_}}
+\index{insert\_@{insert\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{insert\_()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::insert\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{inode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a5fd747730b2ac6130a61599f2d2522a6}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!is\_red\_@{is\_red\_}}
+\index{is\_red\_@{is\_red\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{is\_red\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::is\+\_\+red\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_ac1820993f2e295c42de97af664503885}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!join\_@{join\_}}
+\index{join\_@{join\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{join\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::join\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{m\+\_\+,  }\item[{\textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{b\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classcop5536_1_1rb__tree_ac1820993f2e295c42de97af664503885_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a30f8fadbea424e23c6831cc77f921232}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!left\_rotate\_@{left\_rotate\_}}
+\index{left\_rotate\_@{left\_rotate\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{left\_rotate\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::left\+\_\+rotate\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{lnode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}      x (lnode)                 y
+     / \                       / \
+    a   y (rc)  ====>         x   c
+       / \                   / \
+      b   c                 a   b
+\end{DoxyVerb}
+ y\+\_\+after = y\+\_\+before + x\+\_\+before + 1 \mbox{\label{classcop5536_1_1rb__tree_acf8c4a7d8a0274ae9b8beed6ce4b0f3c}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!next\_@{next\_}}
+\index{next\_@{next\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{next\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::next\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a0c98d8eeb9ba9cfd53114da6a8f1e2a8}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!nth@{nth}}
+\index{nth@{nth}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{nth()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type , class data\+\_\+type , template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::nth (\begin{DoxyParamCaption}\item[{short int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_ad10373a32f6dcb963da22ad36d507fb2}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!prev\_@{prev\_}}
+\index{prev\_@{prev\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{prev\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::prev\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a81f5e4b5a9189799bbc0badcc6ecdc93}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!print\_node@{print\_node}}
+\index{print\_node@{print\_node}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{print\_node()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::print\+\_\+node (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+,  }\item[{int}]{space }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_a81f5e4b5a9189799bbc0badcc6ecdc93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_ae549cd20bdc369bf29acfc543ecdb3a5}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!print\_tree@{print\_tree}}
+\index{print\_tree@{print\_tree}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{print\_tree()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type = rb\+\_\+tree\+\_\+node$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::print\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_ae549cd20bdc369bf29acfc543ecdb3a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_af78f2ce09c3bd9156a1dc4d67b244426}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!right\_rotate\_@{right\_rotate\_}}
+\index{right\_rotate\_@{right\_rotate\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{right\_rotate\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::right\+\_\+rotate\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{rnode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}      y (node)                  x
+     / \                       / \
+\end{DoxyVerb}
+ (lc) x c ====$>$ a y / \textbackslash{} / \textbackslash{} a b b c y\+\_\+before = x\+\_\+before + y\+\_\+after + 1 \mbox{\label{classcop5536_1_1rb__tree_a5ce2bf3088e27c69862dd9a05c87613f}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!search@{search}}
+\index{search@{search}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{search()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type , template$<$ class, class $>$ class node\+\_\+type$>$ \\
+data\+\_\+type \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::search (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classcop5536_1_1rb__tree_a5ce2bf3088e27c69862dd9a05c87613f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a82b13475e29dfb76605908cb68d7c405}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!search\_@{search\_}}
+\index{search\_@{search\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{search\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type , template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::search\+\_\+ (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a07e46d07e6210465f30a6fd5486a9dac}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!search\_eq\_or\_gt@{search\_eq\_or\_gt}}
+\index{search\_eq\_or\_gt@{search\_eq\_or\_gt}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{search\_eq\_or\_gt()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type , template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::search\+\_\+eq\+\_\+or\+\_\+gt (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a222eb0ee0c9d1e02efd9192edb04a990}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!search\_range@{search\_range}}
+\index{search\_range@{search\_range}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{search\_range()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type , template$<$ class, class $>$ class node\+\_\+type$>$ \\
+std\+::vector$<$ node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::search\+\_\+range (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{low,  }\item[{key\+\_\+type}]{high }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classcop5536_1_1rb__tree_a222eb0ee0c9d1e02efd9192edb04a990_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_adf90297cb8bb2624c4fa7dc389d51036}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!search\_range\_@{search\_range\_}}
+\index{search\_range\_@{search\_range\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{search\_range\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::search\+\_\+range\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ $>$ $\ast$}]{rs,  }\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+,  }\item[{key\+\_\+type}]{low,  }\item[{key\+\_\+type}]{high }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a4666680e02d989b1e8fab52f92f7bfb8}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!sibling\_of\_@{sibling\_of\_}}
+\index{sibling\_of\_@{sibling\_of\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{sibling\_of\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::sibling\+\_\+of\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a151086d7353f49ad234479f032bac486}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!split\_@{split\_}}
+\index{split\_@{split\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{split\_()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$ \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::split\+\_\+ (\begin{DoxyParamCaption}\item[{short int}]{n\+\_\+,  }\item[{\textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{b\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_a151086d7353f49ad234479f032bac486_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{classcop5536_1_1rb__tree_a574a8ef5b671eb36e951168ebfc63426}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!split\_@{split\_}}
+\index{split\_@{split\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{split\_()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::split\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+,  }\item[{\textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{b\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a361bb204c7f748f0e8acd91497041085}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!split\_\_@{split\_\_}}
+\index{split\_\_@{split\_\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{split\_\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::split\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+,  }\item[{bool}]{was\+\_\+left,  }\item[{\textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{s\+\_\+tree,  }\item[{\textbf{ rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{b\+\_\+tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classcop5536_1_1rb__tree_a49391ca4153c66bb83f6d59e191dfdeb}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!swap\_parent\_@{swap\_parent\_}}
+\index{swap\_parent\_@{swap\_parent\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{swap\_parent\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::swap\+\_\+parent\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{old\+\_\+node,  }\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{new\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+depend old\+\_\+node is left or right of its parent update parent of old\+\_\+node\textquotesingle{}s left or right child ptr set new\+\_\+node as old\+\_\+node\textquotesingle{}s parent \mbox{\label{classcop5536_1_1rb__tree_ab1d05dae701473136ce4db4592c1659d}} 
+\index{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}!update\_left\_size\_@{update\_left\_size\_}}
+\index{update\_left\_size\_@{update\_left\_size\_}!cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$@{cop5536::rb\_tree$<$ key\_type, data\_type, node\_type $>$}}
+\subsubsection{update\_left\_size\_()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type, template$<$ class, class $>$ class node\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree}$<$ key\+\_\+type, data\+\_\+type, node\+\_\+type $>$\+::update\+\_\+left\+\_\+size\+\_\+ (\begin{DoxyParamCaption}\item[{node\+\_\+type$<$ key\+\_\+type, data\+\_\+type $>$ $\ast$}]{node\+\_\+,  }\item[{int}]{sz = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcop5536_1_1rb__tree_ab1d05dae701473136ce4db4592c1659d_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ rb\+\_\+tree.\+h}\end{DoxyCompactItemize}

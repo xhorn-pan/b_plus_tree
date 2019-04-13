@@ -1,0 +1,824 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classcop5536_1_1rb__tree" kind="class" language="C++" prot="public">
+    <compoundname>cop5536::rb_tree</compoundname>
+    <includes refid="rb__tree_8h" local="no">rb_tree.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>key_type</declname>
+        <defname>key_type</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>data_type</declname>
+        <defname>data_type</defname>
+      </param>
+      <param>
+        <type>template&lt; class, class &gt; class</type>
+        <declname>node_type</declname>
+        <defname>node_type</defname>
+        <defval><ref refid="structcop5536_1_1rb__tree__node" kindref="compound">rb_tree_node</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcop5536_1_1rb__tree_1a7e710bdcdbec02be003090923d504f91" prot="private" static="no" mutable="no">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt;key_type, data_type&gt;* cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="155" column="1" bodyfile="rb_tree.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1adcd88c0e48e263a07d944b78a5d40ac1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::rb_tree</definition>
+        <argsstring>()</argsstring>
+        <name>rb_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="65" column="1" bodyfile="rb_tree.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a83cacee524e3d572a88bfc096e32b59d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::rb_tree</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *o)</argsstring>
+        <name>rb_tree</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="66" column="1" bodyfile="rb_tree.h" bodystart="160" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a35e4d3f5788351f4d7d4086bfb8f31d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::rb_tree</definition>
+        <argsstring>(const rb_tree &amp;o)</argsstring>
+        <name>rb_tree</name>
+        <param>
+          <type>const <ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="67" column="1" bodyfile="rb_tree.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ad9ad1368b9fa7f6d2490855182ba4044" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::~rb_tree</definition>
+        <argsstring>()</argsstring>
+        <name>~rb_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="68" column="1" bodyfile="rb_tree.h" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::insert</definition>
+        <argsstring>(key_type key, data_type data)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>data_type</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="72" column="1" bodyfile="rb_tree.h" bodystart="72" bodyend="72"/>
+        <referencedby refid="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" compoundref="bp__tree_8h" startline="133" endline="184">cop5536::bp_tree::insert</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__l_1ab551cc0e4af968e84b9661c264fd1ece" compoundref="bp__tree_8h" startline="213" endline="223">cop5536::bp_node_l::insert_</referencedby>
+        <referencedby refid="classcop5536_1_1bp__node__l_1abdd4a62184d0220ef5904db44bff31fc" compoundref="bp__tree_8h" startline="225" endline="241">cop5536::bp_node_l::split</referencedby>
+        <referencedby refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rb__main_8cc" startline="9" endline="47">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::print_tree</definition>
+        <argsstring>()</argsstring>
+        <name>print_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="73" column="1" bodyfile="rb_tree.h" bodystart="73" bodyend="81"/>
+        <referencedby refid="classcop5536_1_1bp__node__l_1a12982ece3c311e3ccf653a97d842f39f" compoundref="bp__tree_8h" startline="532" endline="541">cop5536::bp_node_l::print</referencedby>
+        <referencedby refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rb__main_8cc" startline="9" endline="47">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a81f5e4b5a9189799bbc0badcc6ecdc93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::print_node</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_, int space)</argsstring>
+        <name>print_node</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="82" column="1" bodyfile="rb_tree.h" bodystart="82" bodyend="95"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" compoundref="rb__tree_8h" startline="73" endline="81">cop5536::rb_tree&lt; int, float &gt;::print_tree</referencedby>
+        <referencedby refid="classcop5536_1_1rb__tree_1a81f5e4b5a9189799bbc0badcc6ecdc93" compoundref="rb__tree_8h" startline="82" endline="95">cop5536::rb_tree&lt; int, float &gt;::print_node</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ac1b1dd54468fce3724d2e6b4205e0672" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::get_keys</definition>
+        <argsstring>(std::vector&lt; key_type &gt; &amp;vec)</argsstring>
+        <name>get_keys</name>
+        <param>
+          <type>std::vector&lt; key_type &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="96" column="1" bodyfile="rb_tree.h" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1aefd87c14dbf669cbd964b69112d1b553" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::get_keys__</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_, std::vector&lt; key_type &gt; &amp;vec)</argsstring>
+        <name>get_keys__</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; key_type &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="99" column="1" bodyfile="rb_tree.h" bodystart="99" bodyend="104"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1ac1b1dd54468fce3724d2e6b4205e0672" compoundref="rb__tree_8h" startline="96" endline="98">cop5536::rb_tree&lt; int, float &gt;::get_keys</referencedby>
+        <referencedby refid="classcop5536_1_1rb__tree_1aefd87c14dbf669cbd964b69112d1b553" compoundref="rb__tree_8h" startline="99" endline="104">cop5536::rb_tree&lt; int, float &gt;::get_keys__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a25a915e3c06cbfb3d09c3ffd4fb26f82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::delete_key</definition>
+        <argsstring>(key_type key)</argsstring>
+        <name>delete_key</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="105" column="1" bodyfile="rb_tree.h" bodystart="105" bodyend="105"/>
+        <referencedby refid="classcop5536_1_1bp__node__l_1a23c01342ecfd1430bbbbed3be25d8407" compoundref="bp__tree_8h" startline="266" endline="271">cop5536::bp_node_l::remove</referencedby>
+        <referencedby refid="classcop5536_1_1bp__tree_1a424febb6a1d7ce333d8713f43d9462a5" compoundref="bp__tree_8h" startline="409" endline="433">cop5536::bp_tree::remove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a0c98d8eeb9ba9cfd53114da6a8f1e2a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::nth</definition>
+        <argsstring>(short int n)</argsstring>
+        <name>nth</name>
+        <param>
+          <type>short int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="106" column="1" bodyfile="rb_tree.h" bodystart="334" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::join_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *m_, rb_tree&lt; key_type, data_type &gt; *b_)</argsstring>
+        <name>join_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>m_</declname>
+        </param>
+        <param>
+          <type><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree</ref>&lt; key_type, data_type &gt; *</type>
+          <declname>b_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="108" column="1" bodyfile="rb_tree.h" bodystart="251" bodyend="329"/>
+        <referencedby refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rb__main_8cc" startline="9" endline="47">main</referencedby>
+        <referencedby refid="classcop5536_1_1rb__tree_1a361bb204c7f748f0e8acd91497041085" compoundref="rb__tree_8h" startline="225" endline="248">cop5536::rb_tree&lt; int, float &gt;::split__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a675b0beb2560be3caef4001ac079d605" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>short int</type>
+        <definition>short int cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::get_size_of</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>get_size_of</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="110" column="1" bodyfile="rb_tree.h" bodystart="171" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a151086d7353f49ad234479f032bac486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::split_</definition>
+        <argsstring>(short int n_, rb_tree&lt; key_type, data_type &gt; *b_)</argsstring>
+        <name>split_</name>
+        <param>
+          <type>short int</type>
+          <declname>n_</declname>
+        </param>
+        <param>
+          <type><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree</ref>&lt; key_type, data_type &gt; *</type>
+          <declname>b_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="113" column="1" bodyfile="rb_tree.h" bodystart="211" bodyend="221"/>
+        <referencedby refid="classcop5536_1_1bp__node__l_1abdd4a62184d0220ef5904db44bff31fc" compoundref="bp__tree_8h" startline="225" endline="241">cop5536::bp_node_l::split</referencedby>
+        <referencedby refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="rb__main_8cc" startline="9" endline="47">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a574a8ef5b671eb36e951168ebfc63426" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::split_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_, rb_tree&lt; key_type, data_type &gt; *b_)</argsstring>
+        <name>split_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <param>
+          <type><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree</ref>&lt; key_type, data_type &gt; *</type>
+          <declname>b_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="114" column="1" bodyfile="rb_tree.h" bodystart="185" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a5ce2bf3088e27c69862dd9a05c87613f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>data_type</type>
+        <definition>data_type cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::search</definition>
+        <argsstring>(key_type key)</argsstring>
+        <name>search</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="115" column="1" bodyfile="rb_tree.h" bodystart="811" bodyend="823"/>
+        <referencedby refid="classcop5536_1_1bp__node__l_1aaef458660fc157dbe47705075a2ea49f" compoundref="bp__tree_8h" startline="444" endline="448">cop5536::bp_node_l::search</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a07e46d07e6210465f30a6fd5486a9dac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::search_eq_or_gt</definition>
+        <argsstring>(key_type key)</argsstring>
+        <name>search_eq_or_gt</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="116" column="1" bodyfile="rb_tree.h" bodystart="827" bodyend="841"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a222eb0ee0c9d1e02efd9192edb04a990" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; node_type&lt; key_type, data_type &gt; * &gt; *</type>
+        <definition>std::vector&lt; node_type&lt; key_type, data_type &gt; * &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::search_range</definition>
+        <argsstring>(key_type low, key_type high)</argsstring>
+        <name>search_range</name>
+        <param>
+          <type>key_type</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>key_type</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="117" column="1" bodyfile="rb_tree.h" bodystart="802" bodyend="808"/>
+        <referencedby refid="classcop5536_1_1bp__node__l_1a85543d75788128dba421155d524be082" compoundref="bp__tree_8h" startline="451" endline="460">cop5536::bp_node_l::search</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a7a5907ab99800b3fdf73fdaa4d92e57a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::insert_</definition>
+        <argsstring>(key_type key, data_type data)</argsstring>
+        <name>insert_</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>data_type</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="121" column="1" bodyfile="rb_tree.h" bodystart="1026" bodyend="1037"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" compoundref="rb__tree_8h" startline="72" endline="72">cop5536::rb_tree&lt; int, float &gt;::insert</referencedby>
+        <referencedby refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" compoundref="rb__tree_8h" startline="251" endline="329">cop5536::rb_tree&lt; int, float &gt;::join_</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a52941f6d690d7be0ee5a8d91247d7e05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::insert_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *inode)</argsstring>
+        <name>insert_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>inode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="122" column="1" bodyfile="rb_tree.h" bodystart="872" bodyend="905"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a4666680e02d989b1e8fab52f92f7bfb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::sibling_of_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>sibling_of_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="124" column="1" bodyfile="rb_tree.h" bodystart="381" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1acf8c4a7d8a0274ae9b8beed6ce4b0f3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::next_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>next_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="125" column="1" bodyfile="rb_tree.h" bodystart="396" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ad10373a32f6dcb963da22ad36d507fb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::prev_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>prev_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="126" column="1" bodyfile="rb_tree.h" bodystart="412" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1aa3fbcedf69c1875064fbb6b2befd74bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::cut_out_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *cnode, node_type&lt; key_type, data_type &gt; *child_of_)</argsstring>
+        <name>cut_out_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>cnode</declname>
+        </param>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>child_of_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a49391ca4153c66bb83f6d59e191dfdeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::swap_parent_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *old_node, node_type&lt; key_type, data_type &gt; *new_node)</argsstring>
+        <name>swap_parent_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>old_node</declname>
+        </param>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>new_node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>depend old_node is left or right of its parent update parent of old_node&apos;s left or right child ptr set new_node as old_node&apos;s parent </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="129" column="1" bodyfile="rb_tree.h" bodystart="716" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a30f8fadbea424e23c6831cc77f921232" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::left_rotate_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *lnode)</argsstring>
+        <name>left_rotate_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>lnode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>      x (lnode)                 y
+     / \                       / \
+    a   y (rc)  ====&gt;         x   c
+       / \                   / \
+      b   c                 a   b
+</verbatim> y_after = y_before + x_before + 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="131" column="1" bodyfile="rb_tree.h" bodystart="746" bodyend="756"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1af78f2ce09c3bd9156a1dc4d67b244426" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::right_rotate_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *rnode)</argsstring>
+        <name>right_rotate_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>rnode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>      y (node)                  x
+     / \                       / \
+</verbatim> (lc) x c ====&gt; a y / \ / \ a b b c y_before = x_before + y_after + 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="132" column="1" bodyfile="rb_tree.h" bodystart="768" bodyend="778"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ae0a0258360bc0222fa84f380e799c813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::copy_data_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *from, node_type&lt; key_type, data_type &gt; *to)</argsstring>
+        <name>copy_data_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="133" column="1" bodyfile="rb_tree.h" bodystart="1041" bodyend="1045"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a82b13475e29dfb76605908cb68d7c405" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>node_type&lt; key_type, data_type &gt; *</type>
+        <definition>node_type&lt; key_type, data_type &gt; * cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::search_</definition>
+        <argsstring>(key_type key)</argsstring>
+        <name>search_</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="135" column="1" bodyfile="rb_tree.h" bodystart="846" bodyend="868"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a82fcc1eec04d1c16b384aba305fd23f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::delete_</definition>
+        <argsstring>(key_type key)</argsstring>
+        <name>delete_</name>
+        <param>
+          <type>key_type</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="136" column="1" bodyfile="rb_tree.h" bodystart="427" bodyend="446"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1a25a915e3c06cbfb3d09c3ffd4fb26f82" compoundref="rb__tree_8h" startline="105" endline="105">cop5536::rb_tree&lt; int, float &gt;::delete_key</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a9e04d56dd575295b1e01e015aac1f76b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::destory_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>destory_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="137" column="1" bodyfile="rb_tree.h" bodystart="354" bodyend="363"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1ad9ad1368b9fa7f6d2490855182ba4044" compoundref="rb__tree_8h" startline="68" endline="71">cop5536::rb_tree&lt; int, float &gt;::~rb_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1ab1d05dae701473136ce4db4592c1659d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::update_left_size_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_, int sz=1)</argsstring>
+        <name>update_left_size_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="138" column="1" bodyfile="rb_tree.h" bodystart="367" bodyend="376"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" compoundref="rb__tree_8h" startline="251" endline="329">cop5536::rb_tree&lt; int, float &gt;::join_</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a8c4eb96c329545e4056788be0511cd17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::fix_insert_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>fix_insert_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>type XYr | || gp[x] gp[x+1] // \ / \ (parent)pp d(uncle) pp d[x] // [x] // (node) p[x] p[x] no rotate, no left_size change rank change: gp(+1) color change: pp(r=&gt;b), d(r=&gt;b), gp(b=&gt;r) continue fix on gp(uncle-&gt;parent)</para>
+<para>| | (gp) z y // \ // \ y d =====&gt; x z // \ / \ / \ (node_) x c a b c d / \ a b right rotate (gp), rank unchange color change, y, gp left_size change: z z_before = z_after + y_before + 1</para>
+<para>| | | (gp) z z x / \ / \ // \ a y ====&gt; a x ====&gt; z y // \ / \ / \ / \ (node_) x d b y a b c d / \ / \ b c c d right rotate(y), left rotate(z) rank unchange color change z, x left size change: x, y x_after = x_before + z_before + 1 y_before = x_before + y_after + 1</para>
+<para>LRb | | | (gp) z z x // \ // \ // \ y d =====&gt; x d ====&gt; y z / \ // \ / \ / \ a x (node_) y c a b c d / \ / \ b c a b left rotate(y), right rotate(z) rank unchange color change z, x left size change: x, z x_after = x_before + y_before + 1 z_before = x_before + z_after + y_before + 2</para>
+<para>RRb | | (gp) z y / \ // \ a y =====&gt; z x / \ / \ / \ b x (node_) a b c d / \ c d left rotate (gp) rank unchange color change, y, gp left_size change: y y_after = y_before + z_before + 1</para>
+        </inbodydescription>
+        <location file="rb_tree.h" line="139" column="1" bodyfile="rb_tree.h" bodystart="909" bodyend="1022"/>
+        <referencedby refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" compoundref="rb__tree_8h" startline="251" endline="329">cop5536::rb_tree&lt; int, float &gt;::join_</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a5fd747730b2ac6130a61599f2d2522a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::is_red_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_)</argsstring>
+        <name>is_red_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="140" column="1" bodyfile="rb_tree.h" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a40e5cba3e23f6e25c330ed16cb9e4943" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::fix_delete_</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *dnode, node_type&lt; key_type, data_type &gt; *pod, node_type&lt; key_type, data_type &gt; *cod)</argsstring>
+        <name>fix_delete_</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>dnode</declname>
+        </param>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>pod</declname>
+        </param>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>cod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="143" column="1" bodyfile="rb_tree.h" bodystart="450" bodyend="707"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1adf90297cb8bb2624c4fa7dc389d51036" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::search_range_</definition>
+        <argsstring>(std::vector&lt; node_type&lt; key_type, data_type &gt; * &gt; *rs, node_type&lt; key_type, data_type &gt; *node_, key_type low, key_type high)</argsstring>
+        <name>search_range_</name>
+        <param>
+          <type>std::vector&lt; node_type&lt; key_type, data_type &gt; * &gt; *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <param>
+          <type>key_type</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>key_type</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="146" column="1" bodyfile="rb_tree.h" bodystart="782" bodyend="797"/>
+      </memberdef>
+      <memberdef kind="function" id="classcop5536_1_1rb__tree_1a361bb204c7f748f0e8acd91497041085" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::split__</definition>
+        <argsstring>(node_type&lt; key_type, data_type &gt; *node_, bool was_left, rb_tree&lt; key_type, data_type &gt; *s_tree, rb_tree&lt; key_type, data_type &gt; *b_tree)</argsstring>
+        <name>split__</name>
+        <param>
+          <type>node_type&lt; key_type, data_type &gt; *</type>
+          <declname>node_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>was_left</declname>
+        </param>
+        <param>
+          <type><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree</ref>&lt; key_type, data_type &gt; *</type>
+          <declname>s_tree</declname>
+        </param>
+        <param>
+          <type><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree</ref>&lt; key_type, data_type &gt; *</type>
+          <declname>b_tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="150" column="1" bodyfile="rb_tree.h" bodystart="225" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="rb_tree.h" line="63" column="1" bodyfile="rb_tree.h" bodystart="63" bodyend="156"/>
+    <listofallmembers>
+      <member refid="classcop5536_1_1rb__tree_1ae0a0258360bc0222fa84f380e799c813" prot="public" virt="virtual"><scope>cop5536::rb_tree</scope><name>copy_data_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1aa3fbcedf69c1875064fbb6b2befd74bf" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>cut_out_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a82fcc1eec04d1c16b384aba305fd23f5" prot="public" virt="virtual"><scope>cop5536::rb_tree</scope><name>delete_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a25a915e3c06cbfb3d09c3ffd4fb26f82" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>delete_key</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a9e04d56dd575295b1e01e015aac1f76b" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>destory_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a40e5cba3e23f6e25c330ed16cb9e4943" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>fix_delete_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a8c4eb96c329545e4056788be0511cd17" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>fix_insert_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1ac1b1dd54468fce3724d2e6b4205e0672" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>get_keys</name></member>
+      <member refid="classcop5536_1_1rb__tree_1aefd87c14dbf669cbd964b69112d1b553" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>get_keys__</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a675b0beb2560be3caef4001ac079d605" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>get_size_of</name></member>
+      <member refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>insert</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a7a5907ab99800b3fdf73fdaa4d92e57a" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>insert_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a52941f6d690d7be0ee5a8d91247d7e05" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>insert_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a5fd747730b2ac6130a61599f2d2522a6" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>is_red_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>join_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a30f8fadbea424e23c6831cc77f921232" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>left_rotate_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1acf8c4a7d8a0274ae9b8beed6ce4b0f3c" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>next_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a0c98d8eeb9ba9cfd53114da6a8f1e2a8" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>nth</name></member>
+      <member refid="classcop5536_1_1rb__tree_1ad10373a32f6dcb963da22ad36d507fb2" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>prev_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a81f5e4b5a9189799bbc0badcc6ecdc93" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>print_node</name></member>
+      <member refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>print_tree</name></member>
+      <member refid="classcop5536_1_1rb__tree_1adcd88c0e48e263a07d944b78a5d40ac1" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>rb_tree</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a83cacee524e3d572a88bfc096e32b59d" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>rb_tree</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a35e4d3f5788351f4d7d4086bfb8f31d2" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>rb_tree</name></member>
+      <member refid="classcop5536_1_1rb__tree_1af78f2ce09c3bd9156a1dc4d67b244426" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>right_rotate_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a7e710bdcdbec02be003090923d504f91" prot="private" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>root</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a5ce2bf3088e27c69862dd9a05c87613f" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>search</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a82b13475e29dfb76605908cb68d7c405" prot="public" virt="virtual"><scope>cop5536::rb_tree</scope><name>search_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a07e46d07e6210465f30a6fd5486a9dac" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>search_eq_or_gt</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a222eb0ee0c9d1e02efd9192edb04a990" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>search_range</name></member>
+      <member refid="classcop5536_1_1rb__tree_1adf90297cb8bb2624c4fa7dc389d51036" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>search_range_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a4666680e02d989b1e8fab52f92f7bfb8" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>sibling_of_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a151086d7353f49ad234479f032bac486" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>split_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a574a8ef5b671eb36e951168ebfc63426" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>split_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a361bb204c7f748f0e8acd91497041085" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>split__</name></member>
+      <member refid="classcop5536_1_1rb__tree_1a49391ca4153c66bb83f6d59e191dfdeb" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>swap_parent_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1ab1d05dae701473136ce4db4592c1659d" prot="public" virt="non-virtual"><scope>cop5536::rb_tree</scope><name>update_left_size_</name></member>
+      <member refid="classcop5536_1_1rb__tree_1ad9ad1368b9fa7f6d2490855182ba4044" prot="public" virt="virtual"><scope>cop5536::rb_tree</scope><name>~rb_tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

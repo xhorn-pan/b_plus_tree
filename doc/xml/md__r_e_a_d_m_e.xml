@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>COP 5536 spring 2019 Programming Project</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Due Date: Apr 14th 2019, 11:59 pm EST</para>
+<para><heading level="2">1. Gerneral</heading>
+</para>
+<para><heading level="3">Problem description</heading>
+</para>
+<para>The primary value of a B+ tree is storing data for retrival in a block-oriented storage context <ndash/> in particular, file systems. In this project, you&apos;re asked to develop and test a small degree B+ tree used for internal-memory dictionaries (i.e. the entrie tree resides in the main memory). The data is given in the form (key, value) <emphasis>with no duplicates</emphasis>, you are required to implement a m-way B+ tree to store the data pairs. Note that in a B+ tree only leaf nodes contain the actual values, and the leaves should be linked into a doubly linked list. Your implementation should support the following operations:<orderedlist>
+<listitem><para>Initialize(m): create a new m-way B+ tree.</para>
+</listitem><listitem><para>Insert(key, value).</para>
+</listitem><listitem><para>Delete(key).</para>
+</listitem><listitem><para>Search(key): return the value associated withe the key.</para>
+</listitem><listitem><para>Search(key1, key2): return values such that in the range [key1, key2].</para>
+</listitem></orderedlist>
+</para>
+<para><heading level="3">Programming Environment</heading>
+</para>
+<para>You may use either Jave or C++ for this project. Your program will tested using the Jave or g++/gcc compiler on the <ulink url="http://thunder.cise.ufl.edu">thunder</ulink> server. So, you should verify that it compilers and runs as expected on this server, which may be accessed via the Internet.</para>
+<para>Your submisson must include a makefile that creates an executable file named bplustree.</para>
+<para><heading level="2">2. Input and Output Requirements</heading>
+</para>
+<para>Your program should execute using the following:<itemizedlist>
+<listitem><para>For C/C++: $./bplustree file_name</para>
+</listitem><listitem><para>For Jave: $java bplustree file_name where file_name is the name of the file that has the input test data.</para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="3">Input Format</heading>
+</para>
+<para>The first line in the input file <emphasis>Initialize(m)</emphasis> means creating a B+ tree with the order m(note: m may be different depending on input file). Each of the remaining lines specifies a B+ tree operation. The following is an example of an input file:</para>
+<para><programlisting><codeline><highlight class="normal">Intitialize(3)</highlight></codeline>
+<codeline><highlight class="normal">Insert(21,<sp/>0.3534)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(108,31.907)</highlight></codeline>
+<codeline><highlight class="normal">Insert(56089,<sp/>3.26)</highlight></codeline>
+<codeline><highlight class="normal">Insert(234,<sp/>121.56)</highlight></codeline>
+<codeline><highlight class="normal">Insert(4325,<sp/>-109.23)</highlight></codeline>
+<codeline><highlight class="normal">Delete(108)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Search(234)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(102,<sp/>39.56)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(65,<sp/>-3.95)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Delete(102)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Delete(21)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(106,<sp/>-3.91)</highlight></codeline>
+<codeline><highlight class="normal">Insert(23,<sp/>3.55)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Search(23,<sp/>99)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(32,<sp/>0.02)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(220,<sp/>3.55)</highlight></codeline>
+<codeline><highlight class="normal">Delete(234)<sp/>Search(65)<sp/></highlight></codeline>
+</programlisting></para>
+<para>You can use integer as the type of the key and float/double as the type of the value.</para>
+<para><heading level="3">Output Format</heading>
+</para>
+<para>For Initialize, Insert and Delete query you should not produce any output. For a Search query you should output the results on a single line using separate values. The output for each search query should be on a new line. All output should go to a file named &quot;output_file.txt&quot;. If a search query does not return anything you should output &quot;Null&quot;. The following is the output file for the above input file:</para>
+<para><programlisting><codeline><highlight class="normal">121.56</highlight></codeline>
+<codeline><highlight class="normal">3.55,-3.95</highlight></codeline>
+<codeline><highlight class="normal">-3.95</highlight></codeline>
+</programlisting></para>
+<para><heading level="2">3. Submission</heading>
+</para>
+<para>Do not use nested directories. All your files must e in the first directory that appears after unzipping.</para>
+<para>You must submit the following:</para>
+<para><orderedlist>
+<listitem><para>Makefile: You must design your makefile such that &apos;make&apos; command complies the source code and produces executable file. (For java class files that can be run with java command)</para>
+</listitem><listitem><para>Source Program: Provide comments.</para>
+</listitem><listitem><para>REPORT:</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>The report should be in PDF format.</para>
+</listitem><listitem><para>The report should contain your basic info: Name, UFID and UF Email account.</para>
+</listitem><listitem><para>Present function prototypes showing the structure of your programs. Include the structure of your program.</para>
+</listitem></itemizedlist>
+</para>
+<para>To submit, please compress all your files together using a zip utility and submit to the Canvas system. You should look for Assignment Project for the submission. Your submission shoule be named <emphasis>LastName_FirstName.zip</emphasis>.</para>
+<para>Please make sure the name you provided is the same as that appears on the Canvas system. Please do not submit directly to a TA. *All email submissions will be ignored without further notification. Please note that the due day is a hard deadline. No late submission will be allowed. Any submission after the deadline will not be accepted.</para>
+<para><heading level="2">4. Grading Policy</heading>
+</para>
+<para>Grading will be based on the correctness and efficiency of algorithm. Below are some details of the grading policy:<itemizedlist>
+<listitem><para>Correct implementation and execution: 60%. Note: Your program will be graded based on the producted output. You must make sure to produce the correct output to get points. Besides the example input/ output file in this project description, there are two extra test cases for TAs to test your code. Each one of the test contributes 20% to the final grade. Your program will not be graded if it can not be compiled or executed. You will get 0 point in this part if your implementation is not B+ tree.</para>
+</listitem><listitem><para>Comments and readability: 15%</para>
+</listitem><listitem><para>Report: 25%</para>
+</listitem></itemizedlist>
+</para>
+<para>You will get 10% pointss deduced if you do not follow the input/output or submission requirements above. In addition, we may ask you to demonstrate your project.</para>
+<para><heading level="2">5. Miscellaneous</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Do not use complex data structures provided by programming languages. You have to implement B+ tree data structures on your own using primitive data structures such as pointers. You must not use any B/B+ tree related libraries.</para>
+</listitem><listitem><para>Your implementation shoule be you own. You have to work by yourself for this assignment (discussion is allowed). Your submission will be checked for plagiarism. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

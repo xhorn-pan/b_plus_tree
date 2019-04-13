@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="rb__main_8cc" kind="file" language="C++">
+    <compoundname>rb_main.cc</compoundname>
+    <includes refid="rb__tree_8h" local="yes">rb_tree.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">ctime</includes>
+    <incdepgraph>
+      <node id="40">
+        <label>cassert</label>
+      </node>
+      <node id="38">
+        <label>rb_main.cc</label>
+        <link refid="rb__main_8cc"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>ctime</label>
+      </node>
+      <node id="42">
+        <label>vector</label>
+      </node>
+      <node id="39">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>cstdlib</label>
+      </node>
+      <node id="41">
+        <label>iostream</label>
+      </node>
+      <node id="43">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_main.cc" line="9" column="1" bodyfile="rb_main.cc" bodystart="9" bodyend="47"/>
+        <references refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" compoundref="rb__tree_8h" startline="72" endline="72">cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::insert</references>
+        <references refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" compoundref="rb__tree_8h" startline="73" endline="81">cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::print_tree</references>
+        <references refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" compoundref="rb__tree_8h" startline="251" endline="329">cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::join_</references>
+        <references refid="classcop5536_1_1rb__tree_1a151086d7353f49ad234479f032bac486" compoundref="rb__tree_8h" startline="211" endline="221">cop5536::rb_tree&lt; key_type, data_type, node_type &gt;::split_</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rb__tree_8h" kindref="compound">rb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>srand,<sp/>rand<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecop5536" kindref="compound">cop5536</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>srand(time(0));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::vector&lt;int&gt;<sp/>keys;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree&lt;int, int&gt;</ref><sp/>*bst1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree&lt;int, int&gt;</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rand()<sp/>%<sp/>250;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>rand()<sp/>%<sp/>200<sp/>-<sp/>200;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//keys.push_back(r);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>&quot;inserting:<sp/>&quot;<sp/>&lt;&lt;<sp/>r<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>bst1-&gt;<ref refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" kindref="member">insert</ref>(r,<sp/>r+1);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>bst1-&gt;<ref refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" kindref="member">print_tree</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree&lt;int, int&gt;</ref><sp/>*bst2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree&lt;int, int&gt;</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rand()<sp/>%<sp/>50;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>rand()<sp/>%<sp/>200<sp/>+<sp/>100;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//keys.push_back(r);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>&quot;inserting:<sp/>&quot;<sp/>&lt;&lt;<sp/>r<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>bst2-&gt;<ref refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" kindref="member">insert</ref>(r,<sp/>r+2);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>bst2-&gt;<ref refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" kindref="member">print_tree</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="structcop5536_1_1rb__tree__node" kindref="compound">rb_tree_node&lt;int, int&gt;</ref><sp/>*p<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structcop5536_1_1rb__tree__node" kindref="compound">rb_tree_node&lt;int, int&gt;</ref>(50,<sp/>55);<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>bst1-&gt;<ref refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" kindref="member">join_</ref>(p,<sp/>bst2);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>bst1-&gt;<ref refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" kindref="member">print_tree</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>bst2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcop5536_1_1rb__tree" kindref="compound">rb_tree&lt;int, int&gt;</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>rb_tree_node&lt;int&gt;*<sp/>md<sp/>=<sp/>bst1-&gt;nth((short<sp/>int)4);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>bst1-&gt;<ref refid="classcop5536_1_1rb__tree_1a151086d7353f49ad234479f032bac486" kindref="member">split_</ref>((</highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>4,<sp/>bst2);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>bst1-&gt;<ref refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" kindref="member">print_tree</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>bst2-&gt;<ref refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" kindref="member">print_tree</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>bst2;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>bst1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="rb_main.cc"/>
+  </compounddef>
+</doxygen>

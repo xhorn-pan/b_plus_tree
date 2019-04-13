@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
+  <compound refid="classcop5536_1_1bp__node" kind="class"><name>cop5536::bp_node</name>
+    <member refid="classcop5536_1_1bp__node_1a011a8dee13e3446bee783dd9afc33c11" kind="variable"><name>node_size</name></member>
+    <member refid="classcop5536_1_1bp__node_1ac2b250a3d444029d56ab3bf824058f0e" kind="function"><name>bp_node</name></member>
+    <member refid="classcop5536_1_1bp__node_1a317da750875d22031d8eaadce6f8d934" kind="function"><name>bp_node</name></member>
+    <member refid="classcop5536_1_1bp__node_1a0550a89be2909f9765f2db2598ed8f34" kind="function"><name>~bp_node</name></member>
+    <member refid="classcop5536_1_1bp__node_1aa65afc4e5d7eaef471fce7e115a20b8f" kind="function"><name>destory_</name></member>
+    <member refid="classcop5536_1_1bp__node_1a6f12a3668cc105cc1e7d87e1debafa82" kind="function"><name>print</name></member>
+    <member refid="classcop5536_1_1bp__node_1ac0b53957714577d62b9452b8b5611182" kind="function"><name>is_leaf</name></member>
+    <member refid="classcop5536_1_1bp__node_1ae7815123263e3baf4f1fb7e87775fe02" kind="function"><name>is_full</name></member>
+    <member refid="classcop5536_1_1bp__node_1a0f2a0e453f61fdd8965329ecd00f9cd3" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__node_1a11fbec69e8f4b5a6294a0cf7a1ce9ece" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__node_1af3e0eedf3446b6f881f334cc57d42c05" kind="function"><name>remove</name></member>
+    <member refid="classcop5536_1_1bp__node_1a90a56c05435eaed29592ccea0e8333b0" kind="function"><name>splitable</name></member>
+    <member refid="classcop5536_1_1bp__node_1a8db819103997a6e80e0f00558f596d07" kind="function"><name>split</name></member>
+    <member refid="classcop5536_1_1bp__node_1afd68a9ff9b101e8f21d8a341827f4aad" kind="function"><name>insert_</name></member>
+  </compound>
+  <compound refid="classcop5536_1_1bp__node__i" kind="class"><name>cop5536::bp_node_i</name>
+    <member refid="classcop5536_1_1bp__node__i_1a01e9ecddf0de428590924058d4a395b7" kind="variable"><name>first_child</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a84be8cb1326c5cf21f73859fee0f78d0" kind="variable"><name>children</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a0f3850c5f6d1f1ea47091d0c98ca979a" kind="function"><name>bp_node_i</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a7ec49beba718f9d0f2fa10eaf52f1c7a" kind="function"><name>bp_node_i</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a44b690fdd0f974a3b3520c0c222afb97" kind="function"><name>~bp_node_i</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a326dcd8a485264d4154c567dbe4ac804" kind="function"><name>destory_</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a57d4700fe3de996b564bde81197907f2" kind="function"><name>print</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a9d62d2e8e5b34abcb47aa2f17e1cbd99" kind="function"><name>is_leaf</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1ac3d6bfcfb39e3030b523f8276f19bec9" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a2f84bd7bdd54b0d33876b661ae864c8a" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a4549e4be7010c1a6080a3dd6df4f52e0" kind="function"><name>remove</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a6610fa235f6f5f88c1189c7a340cc666" kind="function"><name>split</name></member>
+    <member refid="classcop5536_1_1bp__node__i_1a63a9361ef291e491b35eb5df49f67bce" kind="function"><name>insert_</name></member>
+  </compound>
+  <compound refid="classcop5536_1_1bp__node__l" kind="class"><name>cop5536::bp_node_l</name>
+    <member refid="classcop5536_1_1bp__node__l_1a24a25b19ac46487f9654089e96fae604" kind="variable"><name>data</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1a6ffb52ac4bec5ddc89cce27a1d218fd4" kind="function"><name>bp_node_l</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1a14d78ee51c1a822dc78799110ec05a0a" kind="function"><name>bp_node_l</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1a12982ece3c311e3ccf653a97d842f39f" kind="function"><name>print</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1a6e416d787a2fd3d236939b9ce44bed03" kind="function"><name>is_leaf</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1aaef458660fc157dbe47705075a2ea49f" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1a85543d75788128dba421155d524be082" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1aeb42caefa39b462bb7fae5c7227f9280" kind="function"><name>~bp_node_l</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1aa8cba478b36eb85737d4e769387ddc5f" kind="function"><name>destory_</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1a23c01342ecfd1430bbbbed3be25d8407" kind="function"><name>remove</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1abdd4a62184d0220ef5904db44bff31fc" kind="function"><name>split</name></member>
+    <member refid="classcop5536_1_1bp__node__l_1ab551cc0e4af968e84b9661c264fd1ece" kind="function"><name>insert_</name></member>
+  </compound>
+  <compound refid="classcop5536_1_1bp__tree" kind="class"><name>cop5536::bp_tree</name>
+    <member refid="classcop5536_1_1bp__tree_1ae12dfa8c99394933b6c3116ef5c5c5c1" kind="variable"><name>output</name></member>
+    <member refid="classcop5536_1_1bp__tree_1a98e556c290193a7ac74bac340a4498ed" kind="variable"><name>degree</name></member>
+    <member refid="classcop5536_1_1bp__tree_1aa7d3c5fc24b50b5e9019981a6de3163f" kind="variable"><name>root</name></member>
+    <member refid="classcop5536_1_1bp__tree_1a8f2aa475cf2dccb634015fb983fe8b33" kind="function"><name>bp_tree</name></member>
+    <member refid="classcop5536_1_1bp__tree_1af238ca743991e869f91e940f34da5090" kind="function"><name>bp_tree</name></member>
+    <member refid="classcop5536_1_1bp__tree_1a411c9b8fe2d574fd544c45ab1556f9d5" kind="function"><name>~bp_tree</name></member>
+    <member refid="classcop5536_1_1bp__tree_1a244ebb31e046d28bc2a765d1215c98ac" kind="function"><name>insert</name></member>
+    <member refid="classcop5536_1_1bp__tree_1ab19cba7e122848174579357585b43cb4" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__tree_1afdd6e5e9febb1a2e60d993efb8aed048" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1bp__tree_1a424febb6a1d7ce333d8713f43d9462a5" kind="function"><name>remove</name></member>
+    <member refid="classcop5536_1_1bp__tree_1a5098bb9c72750e80252595a707ad2470" kind="function"><name>print</name></member>
+    <member refid="classcop5536_1_1bp__tree_1aedfc108a47c4c0fccba58e0fbe4afc85" kind="function"><name>open_output</name></member>
+    <member refid="classcop5536_1_1bp__tree_1ada822d6bb72e15c4ba6f9c2848fb883c" kind="function"><name>close_output</name></member>
+  </compound>
+  <compound refid="structcop5536_1_1rb__base__" kind="struct"><name>cop5536::rb_base_</name>
+    <member refid="structcop5536_1_1rb__base___1a03eb25ff786b255fc16e8e81b5eda943" kind="variable"><name>left</name></member>
+    <member refid="structcop5536_1_1rb__base___1a3060f1f117246dbce8b58fc55b8d3bd8" kind="variable"><name>right</name></member>
+    <member refid="structcop5536_1_1rb__base___1abb5b6328ffd04e3eceb6f357cfd9807a" kind="variable"><name>parent</name></member>
+  </compound>
+  <compound refid="classcop5536_1_1rb__tree" kind="class"><name>cop5536::rb_tree</name>
+    <member refid="classcop5536_1_1rb__tree_1a7e710bdcdbec02be003090923d504f91" kind="variable"><name>root</name></member>
+    <member refid="classcop5536_1_1rb__tree_1adcd88c0e48e263a07d944b78a5d40ac1" kind="function"><name>rb_tree</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a83cacee524e3d572a88bfc096e32b59d" kind="function"><name>rb_tree</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a35e4d3f5788351f4d7d4086bfb8f31d2" kind="function"><name>rb_tree</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ad9ad1368b9fa7f6d2490855182ba4044" kind="function"><name>~rb_tree</name></member>
+    <member refid="classcop5536_1_1rb__tree_1af6623f271ebac00dd2b9dc525a21f04b" kind="function"><name>insert</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ae549cd20bdc369bf29acfc543ecdb3a5" kind="function"><name>print_tree</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a81f5e4b5a9189799bbc0badcc6ecdc93" kind="function"><name>print_node</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ac1b1dd54468fce3724d2e6b4205e0672" kind="function"><name>get_keys</name></member>
+    <member refid="classcop5536_1_1rb__tree_1aefd87c14dbf669cbd964b69112d1b553" kind="function"><name>get_keys__</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a25a915e3c06cbfb3d09c3ffd4fb26f82" kind="function"><name>delete_key</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a0c98d8eeb9ba9cfd53114da6a8f1e2a8" kind="function"><name>nth</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ac1820993f2e295c42de97af664503885" kind="function"><name>join_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a675b0beb2560be3caef4001ac079d605" kind="function"><name>get_size_of</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a151086d7353f49ad234479f032bac486" kind="function"><name>split_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a574a8ef5b671eb36e951168ebfc63426" kind="function"><name>split_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a5ce2bf3088e27c69862dd9a05c87613f" kind="function"><name>search</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a07e46d07e6210465f30a6fd5486a9dac" kind="function"><name>search_eq_or_gt</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a222eb0ee0c9d1e02efd9192edb04a990" kind="function"><name>search_range</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a7a5907ab99800b3fdf73fdaa4d92e57a" kind="function"><name>insert_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a52941f6d690d7be0ee5a8d91247d7e05" kind="function"><name>insert_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a4666680e02d989b1e8fab52f92f7bfb8" kind="function"><name>sibling_of_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1acf8c4a7d8a0274ae9b8beed6ce4b0f3c" kind="function"><name>next_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ad10373a32f6dcb963da22ad36d507fb2" kind="function"><name>prev_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1aa3fbcedf69c1875064fbb6b2befd74bf" kind="function"><name>cut_out_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a49391ca4153c66bb83f6d59e191dfdeb" kind="function"><name>swap_parent_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a30f8fadbea424e23c6831cc77f921232" kind="function"><name>left_rotate_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1af78f2ce09c3bd9156a1dc4d67b244426" kind="function"><name>right_rotate_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ae0a0258360bc0222fa84f380e799c813" kind="function"><name>copy_data_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a82b13475e29dfb76605908cb68d7c405" kind="function"><name>search_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a82fcc1eec04d1c16b384aba305fd23f5" kind="function"><name>delete_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a9e04d56dd575295b1e01e015aac1f76b" kind="function"><name>destory_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1ab1d05dae701473136ce4db4592c1659d" kind="function"><name>update_left_size_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a8c4eb96c329545e4056788be0511cd17" kind="function"><name>fix_insert_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a5fd747730b2ac6130a61599f2d2522a6" kind="function"><name>is_red_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a40e5cba3e23f6e25c330ed16cb9e4943" kind="function"><name>fix_delete_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1adf90297cb8bb2624c4fa7dc389d51036" kind="function"><name>search_range_</name></member>
+    <member refid="classcop5536_1_1rb__tree_1a361bb204c7f748f0e8acd91497041085" kind="function"><name>split__</name></member>
+  </compound>
+  <compound refid="structcop5536_1_1rb__tree__node" kind="struct"><name>cop5536::rb_tree_node</name>
+    <member refid="structcop5536_1_1rb__tree__node_1aa976b5b194ebbd5d0a1542febc9578aa" kind="variable"><name>key</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a75876fa1d1523c169440561c015767cf" kind="variable"><name>data</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a7b1f0abc94a3896402867a08617a59bc" kind="variable"><name>color</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1ad3214b42bc71cee98fd96d332b841f56" kind="variable"><name>left_size</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a21eca6b4b58a2dfc29abf71c0c8330eb" kind="variable"><name>rank</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a1d3dc43c1371891fa164ab0bc4de4b56" kind="function"><name>rb_tree_node</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a0dbde597e684835a79eeffc3f4378222" kind="function"><name>~rb_tree_node</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a5a959fba99161c78974cba0dcd3e8ebf" kind="function"><name>switch_color</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1ad37b7f5a02343340d995ab29541c4bc6" kind="function"><name>is_red</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1ad6efe8bd81d5b13d28a415e2d83929aa" kind="function"><name>is_left_child_of_parent</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a75d1567668b0119a84a1b80114c17684" kind="friend"><name>operator==</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1a415f719d7308cb6e24971103a949ecef" kind="friend"><name>operator&lt;</name></member>
+    <member refid="structcop5536_1_1rb__tree__node_1ab9c5fb61a3520ff7f8b7baa06e07f25d" kind="friend"><name>operator&gt;</name></member>
+  </compound>
+  <compound refid="namespacecop5536" kind="namespace"><name>cop5536</name>
+    <member refid="namespacecop5536_1ae51dda62aa0378e4785101f1489bbff5" kind="enum"><name>node_color</name></member>
+    <member refid="namespacecop5536_1ae51dda62aa0378e4785101f1489bbff5abda9643ac6601722a28f238714274da4" kind="enumvalue"><name>red</name></member>
+    <member refid="namespacecop5536_1ae51dda62aa0378e4785101f1489bbff5a1ffd9e753c8054cc61456ac7fac1ac89" kind="enumvalue"><name>black</name></member>
+  </compound>
+  <compound refid="bp__main_8cc" kind="file"><name>bp_main.cc</name>
+    <member refid="bp__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="bp__tree_8h" kind="file"><name>bp_tree.h</name>
+    <member refid="bp__tree_8h_1a61a3c9a18380aafb6e430e79bf596557" kind="define"><name>OUTPUT</name></member>
+  </compound>
+  <compound refid="main_8cc" kind="file"><name>main.cc</name>
+    <member refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="main__test_8cc" kind="file"><name>main_test.cc</name>
+    <member refid="main__test_8cc_1a656eb5868e824d59f489f910db438420" kind="define"><name>CATCH_CONFIG_MAIN</name></member>
+  </compound>
+  <compound refid="rb__main_8cc" kind="file"><name>rb_main.cc</name>
+    <member refid="rb__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="rb__tree_8h" kind="file"><name>rb_tree.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+</doxygenindex>

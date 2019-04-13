@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>COP<sp/>5536<sp/>spring<sp/>2019<sp/>Programming<sp/>Project</highlight></codeline>
+<codeline><highlight class="normal">Due<sp/>Date:<sp/>Apr<sp/>14th<sp/>2019,<sp/>11:59<sp/>pm<sp/>EST</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>1.<sp/>Gerneral</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Problem<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>primary<sp/>value<sp/>of<sp/>a<sp/>B+<sp/>tree<sp/>is<sp/>storing<sp/>data<sp/>for<sp/>retrival<sp/>in<sp/>a</highlight></codeline>
+<codeline><highlight class="normal">block-oriented<sp/>storage<sp/>context<sp/>--<sp/>in<sp/>particular,<sp/>file<sp/>systems.<sp/>In<sp/>this</highlight></codeline>
+<codeline><highlight class="normal">project,<sp/>you&apos;re<sp/>asked<sp/>to<sp/>develop<sp/>and<sp/>test<sp/>a<sp/>small<sp/>degree<sp/>B+<sp/>tree<sp/>used</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>internal-memory<sp/>dictionaries<sp/>(i.e.<sp/>the<sp/>entrie<sp/>tree<sp/>resides<sp/>in<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">main<sp/>memory).<sp/>The<sp/>data<sp/>is<sp/>given<sp/>in<sp/>the<sp/>form<sp/>(key,<sp/>value)<sp/>*with<sp/>no</highlight></codeline>
+<codeline><highlight class="normal">duplicates*,<sp/>you<sp/>are<sp/>required<sp/>to<sp/>implement<sp/>a<sp/>m-way<sp/>B+<sp/>tree<sp/>to<sp/>store</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>data<sp/>pairs.<sp/>Note<sp/>that<sp/>in<sp/>a<sp/>B+<sp/>tree<sp/>only<sp/>leaf<sp/>nodes<sp/>contain<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">actual<sp/>values,<sp/>and<sp/>the<sp/>leaves<sp/>should<sp/>be<sp/>linked<sp/>into<sp/>a<sp/>doubly<sp/>linked</highlight></codeline>
+<codeline><highlight class="normal">list.<sp/>Your<sp/>implementation<sp/>should<sp/>support<sp/>the<sp/>following<sp/>operations:</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Initialize(m):<sp/>create<sp/>a<sp/>new<sp/>m-way<sp/>B+<sp/>tree.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Insert(key,<sp/>value).</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Delete(key).</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Search(key):<sp/>return<sp/>the<sp/>value<sp/>associated<sp/>withe<sp/>the<sp/>key.</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Search(key1,<sp/>key2):<sp/>return<sp/>values<sp/>such<sp/>that<sp/>in<sp/>the<sp/>range<sp/>[key1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>key2].</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Programming<sp/>Environment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>may<sp/>use<sp/>either<sp/>Jave<sp/>or<sp/>C++<sp/>for<sp/>this<sp/>project.<sp/>Your<sp/>program<sp/>will</highlight></codeline>
+<codeline><highlight class="normal">tested<sp/>using<sp/>the<sp/>Jave<sp/>or<sp/>g++/gcc<sp/>compiler<sp/>on<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">[thunder](http://thunder.cise.ufl.edu)<sp/>server.<sp/>So,<sp/>you<sp/>should<sp/>verify</highlight></codeline>
+<codeline><highlight class="normal">that<sp/>it<sp/>compilers<sp/>and<sp/>runs<sp/>as<sp/>expected<sp/>on<sp/>this<sp/>server,<sp/>which<sp/>may<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">accessed<sp/>via<sp/>the<sp/>Internet.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Your<sp/>submisson<sp/>must<sp/>include<sp/>a<sp/>makefile<sp/>that<sp/>creates<sp/>an<sp/>executable<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">named<sp/>bplustree.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>2.<sp/>Input<sp/>and<sp/>Output<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Your<sp/>program<sp/>should<sp/>execute<sp/>using<sp/>the<sp/>following:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>For<sp/>C/C++:<sp/>$./bplustree<sp/>file_name</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>For<sp/>Jave:<sp/>$java<sp/>bplustree<sp/>file_name<sp/>where<sp/>file_name<sp/>is<sp/>the<sp/>name<sp/>of</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>file<sp/>that<sp/>has<sp/>the<sp/>input<sp/>test<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Input<sp/>Format</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>first<sp/>line<sp/>in<sp/>the<sp/>input<sp/>file<sp/>*Initialize(m)*<sp/>means<sp/>creating<sp/>a<sp/>B+</highlight></codeline>
+<codeline><highlight class="normal">tree<sp/>with<sp/>the<sp/>order<sp/>m(note:<sp/>m<sp/>may<sp/>be<sp/>different<sp/>depending<sp/>on<sp/>input</highlight></codeline>
+<codeline><highlight class="normal">file).<sp/>Each<sp/>of<sp/>the<sp/>remaining<sp/>lines<sp/>specifies<sp/>a<sp/>B+<sp/>tree<sp/>operation.<sp/>The</highlight></codeline>
+<codeline><highlight class="normal">following<sp/>is<sp/>an<sp/>example<sp/>of<sp/>an<sp/>input<sp/>file:<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```<sp/></highlight></codeline>
+<codeline><highlight class="normal">Intitialize(3)</highlight></codeline>
+<codeline><highlight class="normal">Insert(21,<sp/>0.3534)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(108,31.907)</highlight></codeline>
+<codeline><highlight class="normal">Insert(56089,<sp/>3.26)</highlight></codeline>
+<codeline><highlight class="normal">Insert(234,<sp/>121.56)</highlight></codeline>
+<codeline><highlight class="normal">Insert(4325,<sp/>-109.23)</highlight></codeline>
+<codeline><highlight class="normal">Delete(108)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Search(234)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(102,<sp/>39.56)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(65,<sp/>-3.95)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Delete(102)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Delete(21)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(106,<sp/>-3.91)</highlight></codeline>
+<codeline><highlight class="normal">Insert(23,<sp/>3.55)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Search(23,<sp/>99)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(32,<sp/>0.02)<sp/></highlight></codeline>
+<codeline><highlight class="normal">Insert(220,<sp/>3.55)</highlight></codeline>
+<codeline><highlight class="normal">Delete(234)<sp/>Search(65)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>use<sp/>integer<sp/>as<sp/>the<sp/>type<sp/>of<sp/>the<sp/>key<sp/>and<sp/>float/double<sp/>as<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">type<sp/>of<sp/>the<sp/>value.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Output<sp/>Format</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>Initialize,<sp/>Insert<sp/>and<sp/>Delete<sp/>query<sp/>you<sp/>should<sp/>not<sp/>produce<sp/>any</highlight></codeline>
+<codeline><highlight class="normal">output.<sp/>For<sp/>a<sp/>Search<sp/>query<sp/>you<sp/>should<sp/>output<sp/>the<sp/>results<sp/>on<sp/>a<sp/>single</highlight></codeline>
+<codeline><highlight class="normal">line<sp/>using<sp/>separate<sp/>values.<sp/>The<sp/>output<sp/>for<sp/>each<sp/>search<sp/>query<sp/>should<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">on<sp/>a<sp/>new<sp/>line.<sp/>All<sp/>output<sp/>should<sp/>go<sp/>to<sp/>a<sp/>file<sp/>named</highlight></codeline>
+<codeline><highlight class="normal">&quot;output_file.txt&quot;.<sp/>If<sp/>a<sp/>search<sp/>query<sp/>does<sp/>not<sp/>return<sp/>anything<sp/>you</highlight></codeline>
+<codeline><highlight class="normal">should<sp/>output<sp/>&quot;Null&quot;.<sp/>The<sp/>following<sp/>is<sp/>the<sp/>output<sp/>file<sp/>for<sp/>the<sp/>above</highlight></codeline>
+<codeline><highlight class="normal">input<sp/>file:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">121.56</highlight></codeline>
+<codeline><highlight class="normal">3.55,-3.95</highlight></codeline>
+<codeline><highlight class="normal">-3.95</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>3.<sp/>Submission</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Do<sp/>not<sp/>use<sp/>nested<sp/>directories.<sp/>All<sp/>your<sp/>files<sp/>must<sp/>e<sp/>in<sp/>the<sp/>first</highlight></codeline>
+<codeline><highlight class="normal">directory<sp/>that<sp/>appears<sp/>after<sp/>unzipping.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>must<sp/>submit<sp/>the<sp/>following:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Makefile:<sp/>You<sp/>must<sp/>design<sp/>your<sp/>makefile<sp/>such<sp/>that<sp/>&apos;make&apos;<sp/>command</highlight></codeline>
+<codeline><highlight class="normal">complies<sp/>the<sp/>source<sp/>code<sp/>and<sp/>produces<sp/>executable<sp/>file.<sp/>(For<sp/>java<sp/>class</highlight></codeline>
+<codeline><highlight class="normal">files<sp/>that<sp/>can<sp/>be<sp/>run<sp/>with<sp/>java<sp/>command)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Source<sp/>Program:<sp/>Provide<sp/>comments.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>REPORT:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>report<sp/>should<sp/>be<sp/>in<sp/>PDF<sp/>format.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>report<sp/>should<sp/>contain<sp/>your<sp/>basic<sp/>info:<sp/>Name,<sp/>UFID<sp/>and<sp/>UF<sp/>Email</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>account.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Present<sp/>function<sp/>prototypes<sp/>showing<sp/>the<sp/>structure<sp/>of<sp/>your</highlight></codeline>
+<codeline><highlight class="normal">programs.<sp/>Include<sp/>the<sp/>structure<sp/>of<sp/>your<sp/>program.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>submit,<sp/>please<sp/>compress<sp/>all<sp/>your<sp/>files<sp/>together<sp/>using<sp/>a<sp/>zip<sp/>utility</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>submit<sp/>to<sp/>the<sp/>Canvas<sp/>system.<sp/>You<sp/>should<sp/>look<sp/>for<sp/>Assignment</highlight></codeline>
+<codeline><highlight class="normal">Project<sp/>for<sp/>the<sp/>submission.<sp/>Your<sp/>submission<sp/>shoule<sp/>be<sp/>named</highlight></codeline>
+<codeline><highlight class="normal">*LastName_FirstName.zip*.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Please<sp/>make<sp/>sure<sp/>the<sp/>name<sp/>you<sp/>provided<sp/>is<sp/>the<sp/>same<sp/>as<sp/>that<sp/>appears<sp/>on</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>Canvas<sp/>system.<sp/>Please<sp/>do<sp/>not<sp/>submit<sp/>directly<sp/>to<sp/>a<sp/>TA.<sp/>*All<sp/>email</highlight></codeline>
+<codeline><highlight class="normal">submissions<sp/>will<sp/>be<sp/>ignored<sp/>without<sp/>further<sp/>notification.<sp/>Please<sp/>note</highlight></codeline>
+<codeline><highlight class="normal">that<sp/>the<sp/>due<sp/>day<sp/>is<sp/>a<sp/>hard<sp/>deadline.<sp/>No<sp/>late<sp/>submission<sp/>will<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">allowed.<sp/>Any<sp/>submission<sp/>after<sp/>the<sp/>deadline<sp/>will<sp/>not<sp/>be<sp/>accepted.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>4.<sp/>Grading<sp/>Policy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Grading<sp/>will<sp/>be<sp/>based<sp/>on<sp/>the<sp/>correctness<sp/>and<sp/>efficiency<sp/>of</highlight></codeline>
+<codeline><highlight class="normal">algorithm.<sp/>Below<sp/>are<sp/>some<sp/>details<sp/>of<sp/>the<sp/>grading<sp/>policy:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Correct<sp/>implementation<sp/>and<sp/>execution:<sp/>60%.<sp/>Note:<sp/>Your<sp/>program<sp/>will<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">graded<sp/>based<sp/>on<sp/>the<sp/>producted<sp/>output.<sp/>You<sp/>must<sp/>make<sp/>sure<sp/>to<sp/>produce</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>correct<sp/>output<sp/>to<sp/>get<sp/>points.<sp/>Besides<sp/>the<sp/>example<sp/>input/<sp/>output</highlight></codeline>
+<codeline><highlight class="normal">file<sp/>in<sp/>this<sp/>project<sp/>description,<sp/>there<sp/>are<sp/>two<sp/>extra<sp/>test<sp/>cases<sp/>for</highlight></codeline>
+<codeline><highlight class="normal">TAs<sp/>to<sp/>test<sp/>your<sp/>code.<sp/>Each<sp/>one<sp/>of<sp/>the<sp/>test<sp/>contributes<sp/>20%<sp/>to<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">final<sp/>grade.<sp/><sp/>Your<sp/>program<sp/>will<sp/>not<sp/>be<sp/>graded<sp/>if<sp/>it<sp/>can<sp/>not<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">compiled<sp/>or<sp/>executed.<sp/>You<sp/>will<sp/>get<sp/>0<sp/>point<sp/>in<sp/>this<sp/>part<sp/>if<sp/>your</highlight></codeline>
+<codeline><highlight class="normal">implementation<sp/>is<sp/>not<sp/>B+<sp/>tree.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Comments<sp/>and<sp/>readability:<sp/>15%</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Report:<sp/>25%</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>will<sp/>get<sp/>10%<sp/>pointss<sp/>deduced<sp/>if<sp/>you<sp/>do<sp/>not<sp/>follow<sp/>the<sp/>input/output</highlight></codeline>
+<codeline><highlight class="normal">or<sp/>submission<sp/>requirements<sp/>above.<sp/>In<sp/>addition,<sp/>we<sp/>may<sp/>ask<sp/>you<sp/>to</highlight></codeline>
+<codeline><highlight class="normal">demonstrate<sp/>your<sp/>project.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>5.<sp/>Miscellaneous</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Do<sp/>not<sp/>use<sp/>complex<sp/>data<sp/>structures<sp/>provided<sp/>by<sp/>programming</highlight></codeline>
+<codeline><highlight class="normal">languages.<sp/>You<sp/>have<sp/>to<sp/>implement<sp/>B+<sp/>tree<sp/>data<sp/>structures<sp/>on<sp/>your<sp/>own</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>primitive<sp/>data<sp/>structures<sp/>such<sp/>as<sp/>pointers.<sp/>You<sp/>must<sp/>not<sp/>use<sp/>any</highlight></codeline>
+<codeline><highlight class="normal">B/B+<sp/>tree<sp/>related<sp/>libraries.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Your<sp/>implementation<sp/>shoule<sp/>be<sp/>you<sp/>own.<sp/>You<sp/>have<sp/>to<sp/>work<sp/>by<sp/>yourself</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>this<sp/>assignment<sp/>(discussion<sp/>is<sp/>allowed).<sp/>Your<sp/>submission<sp/>will<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">checked<sp/>for<sp/>plagiarism.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

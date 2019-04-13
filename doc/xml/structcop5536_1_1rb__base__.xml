@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="structcop5536_1_1rb__base__" kind="struct" language="C++" prot="public">
+    <compoundname>cop5536::rb_base_</compoundname>
+    <includes refid="rb__tree_8h" local="no">rb_tree.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>node_type</declname>
+        <defname>node_type</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcop5536_1_1rb__base___1a03eb25ff786b255fc16e8e81b5eda943" prot="public" static="no" mutable="no">
+        <type>node_type *</type>
+        <definition>node_type* cop5536::rb_base_&lt; node_type &gt;::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="14" column="1" bodyfile="rb_tree.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcop5536_1_1rb__base___1a3060f1f117246dbce8b58fc55b8d3bd8" prot="public" static="no" mutable="no">
+        <type>node_type *</type>
+        <definition>node_type* cop5536::rb_base_&lt; node_type &gt;::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="15" column="1" bodyfile="rb_tree.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcop5536_1_1rb__base___1abb5b6328ffd04e3eceb6f357cfd9807a" prot="public" static="no" mutable="no">
+        <type>node_type *</type>
+        <definition>node_type* cop5536::rb_base_&lt; node_type &gt;::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="16" column="1" bodyfile="rb_tree.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="17">
+        <label>cop5536::rb_base_&lt; node_type &gt;</label>
+        <link refid="structcop5536_1_1rb__base__"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>right</edgelabel>
+          <edgelabel>left</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>node_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="rb_tree.h" line="13" column="1" bodyfile="rb_tree.h" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="structcop5536_1_1rb__base___1a03eb25ff786b255fc16e8e81b5eda943" prot="public" virt="non-virtual"><scope>cop5536::rb_base_</scope><name>left</name></member>
+      <member refid="structcop5536_1_1rb__base___1abb5b6328ffd04e3eceb6f357cfd9807a" prot="public" virt="non-virtual"><scope>cop5536::rb_base_</scope><name>parent</name></member>
+      <member refid="structcop5536_1_1rb__base___1a3060f1f117246dbce8b58fc55b8d3bd8" prot="public" virt="non-virtual"><scope>cop5536::rb_base_</scope><name>right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

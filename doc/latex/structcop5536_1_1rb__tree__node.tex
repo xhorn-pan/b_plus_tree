@@ -1,0 +1,169 @@
+\section{cop5536\+::rb\+\_\+tree\+\_\+node$<$ key\+\_\+type, data\+\_\+type $>$ Struct Template Reference}
+\label{structcop5536_1_1rb__tree__node}\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+
+
+{\ttfamily \#include $<$rb\+\_\+tree.\+h$>$}
+
+
+
+Inheritance diagram for cop5536\+::rb\+\_\+tree\+\_\+node$<$ key\+\_\+type, data\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{structcop5536_1_1rb__tree__node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cop5536\+::rb\+\_\+tree\+\_\+node$<$ key\+\_\+type, data\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{structcop5536_1_1rb__tree__node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ rb\+\_\+tree\+\_\+node} (key\+\_\+type \textbf{ key}, data\+\_\+type real\+\_\+data)
+\item 
+\textbf{ $\sim$rb\+\_\+tree\+\_\+node} ()
+\item 
+void \textbf{ switch\+\_\+color} ()
+\item 
+bool \textbf{ is\+\_\+red} ()
+\item 
+bool \textbf{ is\+\_\+left\+\_\+child\+\_\+of\+\_\+parent} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+key\+\_\+type \textbf{ key}
+\item 
+data\+\_\+type \textbf{ data}
+\item 
+\textbf{ node\+\_\+color} \textbf{ color}
+\item 
+short int \textbf{ left\+\_\+size}
+\item 
+short int \textbf{ rank}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ operator==} (const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&bt1, const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&bt2)
+\item 
+bool \textbf{ operator$<$} (const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&bt1, const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&bt2)
+\item 
+bool \textbf{ operator$>$} (const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&bt1, const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&bt2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{structcop5536_1_1rb__tree__node_a1d3dc43c1371891fa164ab0bc4de4b56}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!rb\_tree\_node@{rb\_tree\_node}}
+\index{rb\_tree\_node@{rb\_tree\_node}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{rb\_tree\_node()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+\textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::\textbf{ rb\+\_\+tree\+\_\+node} (\begin{DoxyParamCaption}\item[{key\+\_\+type}]{key,  }\item[{data\+\_\+type}]{real\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_a0dbde597e684835a79eeffc3f4378222}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!````~rb\_tree\_node@{$\sim$rb\_tree\_node}}
+\index{````~rb\_tree\_node@{$\sim$rb\_tree\_node}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{$\sim$rb\_tree\_node()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+\textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::$\sim$\textbf{ rb\+\_\+tree\+\_\+node} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{structcop5536_1_1rb__tree__node_ad6efe8bd81d5b13d28a415e2d83929aa}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!is\_left\_child\_of\_parent@{is\_left\_child\_of\_parent}}
+\index{is\_left\_child\_of\_parent@{is\_left\_child\_of\_parent}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{is\_left\_child\_of\_parent()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::is\+\_\+left\+\_\+child\+\_\+of\+\_\+parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_ad37b7f5a02343340d995ab29541c4bc6}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!is\_red@{is\_red}}
+\index{is\_red@{is\_red}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{is\_red()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+bool \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::is\+\_\+red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_a5a959fba99161c78974cba0dcd3e8ebf}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!switch\_color@{switch\_color}}
+\index{switch\_color@{switch\_color}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{switch\_color()}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+void \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::switch\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\label{structcop5536_1_1rb__tree__node_a415f719d7308cb6e24971103a949ecef}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{operator$<$}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+bool operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&}]{bt1,  }\item[{const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&}]{bt2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_a75d1567668b0119a84a1b80114c17684}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{operator==}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&}]{bt1,  }\item[{const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&}]{bt2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_ab9c5fb61a3520ff7f8b7baa06e07f25d}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{operator$>$}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+bool operator$>$ (\begin{DoxyParamCaption}\item[{const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&}]{bt1,  }\item[{const \textbf{ rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$ \&}]{bt2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{structcop5536_1_1rb__tree__node_a7b1f0abc94a3896402867a08617a59bc}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!color@{color}}
+\index{color@{color}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{color}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+\textbf{ node\+\_\+color} \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::color}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_a75876fa1d1523c169440561c015767cf}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!data@{data}}
+\index{data@{data}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{data}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+data\+\_\+type \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::data}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_aa976b5b194ebbd5d0a1542febc9578aa}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!key@{key}}
+\index{key@{key}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{key}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+key\+\_\+type \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::key}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_ad3214b42bc71cee98fd96d332b841f56}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!left\_size@{left\_size}}
+\index{left\_size@{left\_size}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{left\_size}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+short int \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::left\+\_\+size}
+
+\mbox{\label{structcop5536_1_1rb__tree__node_a21eca6b4b58a2dfc29abf71c0c8330eb}} 
+\index{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}!rank@{rank}}
+\index{rank@{rank}!cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$@{cop5536::rb\_tree\_node$<$ key\_type, data\_type $>$}}
+\subsubsection{rank}
+{\footnotesize\ttfamily template$<$class key\+\_\+type, class data\+\_\+type$>$ \\
+short int \textbf{ cop5536\+::rb\+\_\+tree\+\_\+node}$<$ key\+\_\+type, data\+\_\+type $>$\+::rank}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ rb\+\_\+tree.\+h}\end{DoxyCompactItemize}

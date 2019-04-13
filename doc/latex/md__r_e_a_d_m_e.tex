@@ -1,0 +1,110 @@
+Due Date\+: Apr 14th 2019, 11\+:59 pm E\+ST
+
+\subsection*{1. Gerneral}
+
+\subsubsection*{Problem description}
+
+The primary value of a B+ tree is storing data for retrival in a block-\/oriented storage context -- in particular, file systems. In this project, you\textquotesingle{}re asked to develop and test a small degree B+ tree used for internal-\/memory dictionaries (i.\+e. the entrie tree resides in the main memory). The data is given in the form (key, value) {\itshape with no duplicates}, you are required to implement a m-\/way B+ tree to store the data pairs. Note that in a B+ tree only leaf nodes contain the actual values, and the leaves should be linked into a doubly linked list. Your implementation should support the following operations\+:
+\begin{DoxyEnumerate}
+\item Initialize(m)\+: create a new m-\/way B+ tree.
+\item Insert(key, value).
+\item Delete(key).
+\item Search(key)\+: return the value associated withe the key.
+\item Search(key1, key2)\+: return values such that in the range [key1, key2].
+\end{DoxyEnumerate}
+
+\subsubsection*{Programming Environment}
+
+You may use either Jave or C++ for this project. Your program will tested using the Jave or g++/gcc compiler on the {\texttt{ thunder}} server. So, you should verify that it compilers and runs as expected on this server, which may be accessed via the Internet.
+
+Your submisson must include a makefile that creates an executable file named bplustree.
+
+\subsection*{2. Input and Output Requirements}
+
+Your program should execute using the following\+:
+\begin{DoxyItemize}
+\item For C/\+C++\+: \$./bplustree file\+\_\+name
+\item For Jave\+: \$java bplustree file\+\_\+name where file\+\_\+name is the name of the file that has the input test data.
+\end{DoxyItemize}
+
+\subsubsection*{Input Format}
+
+The first line in the input file {\itshape Initialize(m)} means creating a B+ tree with the order m(note\+: m may be different depending on input file). Each of the remaining lines specifies a B+ tree operation. The following is an example of an input file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Intitialize(3)}
+\DoxyCodeLine{Insert(21, 0.3534) }
+\DoxyCodeLine{Insert(108,31.907)}
+\DoxyCodeLine{Insert(56089, 3.26)}
+\DoxyCodeLine{Insert(234, 121.56)}
+\DoxyCodeLine{Insert(4325, -109.23)}
+\DoxyCodeLine{Delete(108) }
+\DoxyCodeLine{Search(234) }
+\DoxyCodeLine{Insert(102, 39.56) }
+\DoxyCodeLine{Insert(65, -3.95) }
+\DoxyCodeLine{Delete(102) }
+\DoxyCodeLine{Delete(21) }
+\DoxyCodeLine{Insert(106, -3.91)}
+\DoxyCodeLine{Insert(23, 3.55) }
+\DoxyCodeLine{Search(23, 99) }
+\DoxyCodeLine{Insert(32, 0.02) }
+\DoxyCodeLine{Insert(220, 3.55)}
+\DoxyCodeLine{Delete(234) Search(65) }
+\end{DoxyCode}
+
+
+You can use integer as the type of the key and float/double as the type of the value.
+
+\subsubsection*{Output Format}
+
+For Initialize, Insert and Delete query you should not produce any output. For a Search query you should output the results on a single line using separate values. The output for each search query should be on a new line. All output should go to a file named \char`\"{}output\+\_\+file.\+txt\char`\"{}. If a search query does not return anything you should output \char`\"{}\+Null\char`\"{}. The following is the output file for the above input file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121.56}
+\DoxyCodeLine{3.55,-3.95}
+\DoxyCodeLine{-3.95}
+\end{DoxyCode}
+
+
+\subsection*{3. Submission}
+
+Do not use nested directories. All your files must e in the first directory that appears after unzipping.
+
+You must submit the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Makefile\+: You must design your makefile such that \textquotesingle{}make\textquotesingle{} command complies the source code and produces executable file. (For java class files that can be run with java command)
+\item Source Program\+: Provide comments.
+\item R\+E\+P\+O\+RT\+:
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item The report should be in P\+DF format.
+\item The report should contain your basic info\+: Name, U\+F\+ID and UF Email account.
+\item Present function prototypes showing the structure of your programs. Include the structure of your program.
+\end{DoxyItemize}
+
+To submit, please compress all your files together using a zip utility and submit to the Canvas system. You should look for Assignment Project for the submission. Your submission shoule be named {\itshape Last\+Name\+\_\+\+First\+Name.\+zip}.
+
+Please make sure the name you provided is the same as that appears on the Canvas system. Please do not submit directly to a TA. $\ast$\+All email submissions will be ignored without further notification. Please note that the due day is a hard deadline. No late submission will be allowed. Any submission after the deadline will not be accepted.
+
+\subsection*{4. Grading Policy}
+
+Grading will be based on the correctness and efficiency of algorithm. Below are some details of the grading policy\+:
+\begin{DoxyItemize}
+\item Correct implementation and execution\+: 60\%. Note\+: Your program will be graded based on the producted output. You must make sure to produce the correct output to get points. Besides the example input/ output file in this project description, there are two extra test cases for T\+As to test your code. Each one of the test contributes 20\% to the final grade. Your program will not be graded if it can not be compiled or executed. You will get 0 point in this part if your implementation is not B+ tree.
+\item Comments and readability\+: 15\%
+\item Report\+: 25\%
+\end{DoxyItemize}
+
+You will get 10\% pointss deduced if you do not follow the input/output or submission requirements above. In addition, we may ask you to demonstrate your project.
+
+\subsection*{5. Miscellaneous}
+
+
+\begin{DoxyItemize}
+\item Do not use complex data structures provided by programming languages. You have to implement B+ tree data structures on your own using primitive data structures such as pointers. You must not use any B/\+B+ tree related libraries.
+\item Your implementation shoule be you own. You have to work by yourself for this assignment (discussion is allowed). Your submission will be checked for plagiarism. 
+\end{DoxyItemize}

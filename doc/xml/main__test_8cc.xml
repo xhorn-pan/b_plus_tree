@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="main__test_8cc" kind="file" language="C++">
+    <compoundname>main_test.cc</compoundname>
+    <includes local="yes">catch2.h</includes>
+    <incdepgraph>
+      <node id="35">
+        <label>main_test.cc</label>
+        <link refid="main__test_8cc"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>catch2.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="main__test_8cc_1a656eb5868e824d59f489f910db438420" prot="public" static="no">
+        <name>CATCH_CONFIG_MAIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main_test.cc" line="1" column="9" bodyfile="main_test.cc" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="main__test_8cc_1a656eb5868e824d59f489f910db438420" refkind="member"><highlight class="preprocessor">#define<sp/>CATCH_CONFIG_MAIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;catch2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="main_test.cc"/>
+  </compounddef>
+</doxygen>

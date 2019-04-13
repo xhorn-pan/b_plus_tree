@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespacecop5536" kind="namespace" language="C++">
+    <compoundname>cop5536</compoundname>
+    <innerclass refid="classcop5536_1_1bp__node" prot="public">cop5536::bp_node</innerclass>
+    <innerclass refid="classcop5536_1_1bp__node__i" prot="public">cop5536::bp_node_i</innerclass>
+    <innerclass refid="classcop5536_1_1bp__node__l" prot="public">cop5536::bp_node_l</innerclass>
+    <innerclass refid="classcop5536_1_1bp__tree" prot="public">cop5536::bp_tree</innerclass>
+    <innerclass refid="structcop5536_1_1rb__base__" prot="public">cop5536::rb_base_</innerclass>
+    <innerclass refid="classcop5536_1_1rb__tree" prot="public">cop5536::rb_tree</innerclass>
+    <innerclass refid="structcop5536_1_1rb__tree__node" prot="public">cop5536::rb_tree_node</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacecop5536_1ae51dda62aa0378e4785101f1489bbff5" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>node_color</name>
+        <enumvalue id="namespacecop5536_1ae51dda62aa0378e4785101f1489bbff5abda9643ac6601722a28f238714274da4" prot="public">
+          <name>red</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecop5536_1ae51dda62aa0378e4785101f1489bbff5a1ffd9e753c8054cc61456ac7fac1ac89" prot="public">
+          <name>black</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rb_tree.h" line="11" column="1" bodyfile="rb_tree.h" bodystart="11" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="bp_tree.h" line="11" column="1"/>
+  </compounddef>
+</doxygen>

@@ -12,34 +12,35 @@ namespace cop5536 {
 class bp_node {
 public:
   unsigned short node_size; // number of keys in rb_tree
+  unsigned short degree;
   // public:
-  bp_node() : node_size(0){};
-  explicit bp_node(unsigned short ns) : node_size(ns){};
+  bp_node(unsigned short d) : node_size(0), degree(d){};
+  explicit bp_node(unsigned short ns, unsigned short d) : node_size(ns), degree(d){};
   virtual ~bp_node(){};
   virtual void destory_() = 0;
   virtual void print() = 0;
   virtual bool is_leaf() = 0;
-  bool is_full(unsigned short degree) { return this->node_size >= degree; };
+  bool is_full() { return node_size >= degree; };
 
   virtual float search(int key) = 0;
   virtual std::vector<float> *search(int low, int high) = 0;
   virtual bool remove(int key) = 0;
   virtual bool splitable() { return this->node_size >= 2; };
   virtual rb_tree_node<int, bp_node *> *split(bool is_left) = 0;
+  virtual rb_tree_node<int, bp_node *> *
+  join_(bp_node *sibling, bool is_left) = 0;
   // virtual void split();
-  virtual rb_tree_node<int, bp_node *> *insert_(int key, float value,
-                                                unsigned short degree) = 0;
+  virtual rb_tree_node<int, bp_node *> *insert_(int key, float value) = 0;
 };
 
 // internal node
 
 class bp_node_i : public bp_node {
 public:
-  bp_node_i() = delete; //: bp_node<int, bp_node<int, float>>(),
-                        // first_child(nullptr), children(nullptr) {};
-  explicit bp_node_i(unsigned short ns, bp_node *fc,
+  bp_node_i(unsigned short d): bp_node(d){}; 
+  explicit bp_node_i(unsigned short ns, unsigned short d, bp_node *fc,
                      rb_tree<int, bp_node *> *children)
-      : bp_node(ns), first_child(fc), children(children){};
+      : bp_node(ns, d), first_child(fc), children(children){};
   virtual ~bp_node_i() override { this->destory_(); };
   virtual void destory_() override;
   virtual void print() override;
@@ -48,8 +49,9 @@ public:
   virtual std::vector<float> *search(int low, int high) override;
   virtual bool remove(int key) override;
   virtual rb_tree_node<int, bp_node *> *split(bool is_left) override;
-  virtual rb_tree_node<int, bp_node *> *insert_(int key, float value,
-                                                unsigned short degree) override;
+  virtual rb_tree_node<int, bp_node *> *
+  join_(bp_node *sibling, bool is_left) override;
+  virtual rb_tree_node<int, bp_node *> *insert_(int key, float value) override;
   bp_node *first_child;              // pointer to subtree with smallest key
   rb_tree<int, bp_node *> *children; // all other children, in a red black tree
 };
@@ -57,10 +59,9 @@ public:
 // leaf node
 class bp_node_l : public bp_node {
 public:
-  bp_node_l() : bp_node(), data(nullptr){}; // , next(nullptr), prev(nullptr){};
-  explicit bp_node_l(unsigned short ns, rb_tree<int, float> *ds)
-      : bp_node(ns), data(ds){}; //, next(nullptr),
-  // prev(nullptr){};
+  bp_node_l(unsigned short d) : bp_node(d), data(nullptr){}; 
+  explicit bp_node_l(unsigned short ns, unsigned short d, rb_tree<int, float> *ds)
+      : bp_node(ns, d), data(ds){}; 
   virtual void print() override;
   virtual bool is_leaf() override { return true; };
   // void insert(int key, float value) override;
@@ -70,8 +71,9 @@ public:
   virtual void destory_() override;
   virtual bool remove(int key) override;
   virtual rb_tree_node<int, bp_node *> *split(bool is_left) override;
-  virtual rb_tree_node<int, bp_node *> *insert_(int key, float value,
-                                                unsigned short degree) override;
+  virtual rb_tree_node<int, bp_node *> *
+  join_(bp_node *sibling, bool is_left) override;
+  virtual rb_tree_node<int, bp_node *> *insert_(int key, float value) override;
   rb_tree<int, float> *data;
 };
 // B plus tree
@@ -129,7 +131,7 @@ void bp_tree::insert(int key, float value) {
   if (root == nullptr) {
     rb_tree<int, float> *rb_i = new rb_tree<int, float>();
     rb_i->insert(key, value);
-    bp_node_l *bp_l = new bp_node_l(2, rb_i);
+    bp_node_l *bp_l = new bp_node_l(2, this->degree, rb_i);
     root = bp_l;
     return;
   }
@@ -138,13 +140,13 @@ void bp_tree::insert(int key, float value) {
     // call the function of real insert
     std::future<rb_tree_node<int, bp_node *> *> fu =
         std::async(std::launch::async, &bp_node::insert_, this->root, key,
-                   value, this->degree);
+                   value);
     n_bp_i_node = fu.get();
     if (n_bp_i_node) {
       // create new bp internal node
       rb_tree<int, bp_node *> *new_root_data =
           new rb_tree<int, bp_node *>(n_bp_i_node);
-      bp_node_i *new_root = new bp_node_i(2, root, new_root_data);
+      bp_node_i *new_root = new bp_node_i(2, this->degree, root, new_root_data);
       root = new_root;
     }
   } else {
@@ -161,8 +163,7 @@ void bp_tree::insert(int key, float value) {
     rb_tree_node<int, bp_node *> *n_bp_i_node = nullptr;
     // call the function of real insert
     std::future<rb_tree_node<int, bp_node *> *> fu =
-        std::async(std::launch::async, &bp_node::insert_, key_node, key, value,
-                   this->degree);
+        std::async(std::launch::async, &bp_node::insert_, key_node, key, value);
     n_bp_i_node = fu.get();
     if (n_bp_i_node) {
       if (i_node->children->insert_(n_bp_i_node)) {
@@ -172,15 +173,14 @@ void bp_tree::insert(int key, float value) {
         auto rp_ = i_node->split(false);
         rb_tree<int, bp_node *> *new_root_data =
             new rb_tree<int, bp_node *>(rp_);
-        bp_node_i *new_root = new bp_node_i(2, root, new_root_data);
+        bp_node_i *new_root = new bp_node_i(2, this->degree, root, new_root_data);
         root = new_root;
       }
     }
   }
 }
 
-inline rb_tree_node<int, bp_node *> *bp_node_i::insert_(int key, float value,
-                                                        unsigned short degree) {
+inline rb_tree_node<int, bp_node *> *bp_node_i::insert_(int key, float value) {
   rb_tree_node<int, bp_node *> *ins_to = this->children->search_eq_or_gt(key);
   bp_node *key_node;
   if (ins_to->key > key) {
@@ -191,13 +191,13 @@ inline rb_tree_node<int, bp_node *> *bp_node_i::insert_(int key, float value,
   rb_tree_node<int, bp_node *> *n_bp_i_node = nullptr;
   // call the function of real insert
   std::future<rb_tree_node<int, bp_node *> *> fu = std::async(
-      std::launch::async, &bp_node::insert_, key_node, key, value, degree);
+      std::launch::async, &bp_node::insert_, key_node, key, value);
   n_bp_i_node = fu.get();
   if (n_bp_i_node) {
     if (this->children->insert_(n_bp_i_node)) {
       this->node_size += 1;
     }
-    if (degree < this->node_size) {
+    if (this->is_full()) {
       // need split
       return this->split(false);
     }
@@ -205,12 +205,11 @@ inline rb_tree_node<int, bp_node *> *bp_node_i::insert_(int key, float value,
   return nullptr;
 }
 
-inline rb_tree_node<int, bp_node *> *bp_node_l::insert_(int key, float value,
-                                                        unsigned short degree) {
+inline rb_tree_node<int, bp_node *> *bp_node_l::insert_(int key, float value) {
   if (data->insert(key, value)) {
     this->node_size += 1;
   }
-  if (this->node_size > degree) { // full node split;
+  if (this->is_full()) { // full node split;
     return this->split(false);
   } else {
     return nullptr;
@@ -228,7 +227,7 @@ inline rb_tree_node<int, bp_node *> *bp_node_l::split(bool is_left) {
   n_rb_node->insert(rp_->key, rp_->data);
   // should delete rp_
   // create new leaf node
-  bp_node_l *bp_l = new bp_node_l(l_before / 2 + 1, n_rb_node);
+  bp_node_l *bp_l = new bp_node_l(l_before / 2 + 1, this->degree, n_rb_node);
   // create new internal bp node, for insertion to its parent node;
   rb_tree_node<int, bp_node *> *n_bp_node =
       new rb_tree_node<int, bp_node *>(l_key, bp_l);
@@ -244,7 +243,7 @@ inline rb_tree_node<int, bp_node *> *bp_node_i::split(bool is_left) {
   auto rp_ = this->children->split_(l_before / 2 - 1, n_rb_node);
   if (is_left) {
     bp_node_i *r_bp =
-        new bp_node_i(l_before / 2, this->first_child, this->children);
+        new bp_node_i(l_before / 2, this->degree, this->first_child, this->children);
     rb_tree_node<int, bp_node *> *r_rb_node =
         new rb_tree_node<int, bp_node *>(rp_->key, r_bp);
     // FIX ME not right
@@ -253,7 +252,7 @@ inline rb_tree_node<int, bp_node *> *bp_node_i::split(bool is_left) {
     this->node_size = l_before / 2;
     return r_rb_node;
   } else {
-    bp_node_i *r_bp = new bp_node_i(l_before / 2, rp_->data, n_rb_node);
+    bp_node_i *r_bp = new bp_node_i(l_before / 2, this->degree, rp_->data, n_rb_node);
     rb_tree_node<int, bp_node *> *r_rb_node =
         new rb_tree_node<int, bp_node *>(rp_->key, r_bp);
     this->node_size = l_before / 2;
@@ -261,11 +260,53 @@ inline rb_tree_node<int, bp_node *> *bp_node_i::split(bool is_left) {
   }
 }
 
+
+// join with sibling index node
+// is_left is true if sibling is at left side of this node
+// means that elems in sibling < elems in this node
+inline rb_tree_node<int, bp_node*> * bp_node_i::join_(bp_node *sibling, bool is_left) {
+  bp_node_i* sibling_i = static_cast<bp_node_i*>(sibling);
+  rb_tree_node<int, bp_node*>* join_elem;
+  rb_tree<int, bp_node*>* b_ = new rb_tree<int, bp_node*>();
+
+
+  return nullptr;
+}
+
+// join with sibling leaf node
+// is_left is true if sibling is at left side of this node
+// means that elems in sibling < elems in this node
+inline rb_tree_node<int, bp_node *> *
+bp_node_l::join_(bp_node *sibling, bool is_left) {
+  bp_node_l* sibling_l = static_cast<bp_node_l*>(sibling);
+  rb_tree_node<int, float>* join_elem;
+  rb_tree<int, float>* b_ = new rb_tree<int, float>();
+  if(is_left) {
+    join_elem = this->data->split_((short)0, b_);
+    sibling_l->data->join_(join_elem, b_);
+    sibling_l->node_size += (this->node_size - 1);
+    if(sibling_l->is_full()) {
+      return sibling_l->split(false);
+    } else {
+      return nullptr;
+    }
+  } else {
+    join_elem = sibling_l->data->split_((short)0,b_);
+    this->data->join_(join_elem, b_);
+    this->node_size += (sibling_l->node_size - 1);
+    if(this->is_full()) {
+      return this->split(false);
+    } else {
+      return nullptr;
+    }
+  }
+}
+
 inline bool bp_node_l::remove(int key) {
   if (this->data->delete_key(key)) {
     this->node_size -= 1;
   }
-  return this->node_size == 1;
+  return this->node_size <= this->degree/2;
 }
 
 inline bool bp_node_i::remove(int key) {
@@ -420,16 +461,22 @@ void bp_tree::remove(int key) {
     bp_node *key_node;
     if (ins_to->key > key) {
       key_node = i_node->first_child;
-      // ins_to->data = i_node->first_child;
     } else {
       key_node = ins_to->data;
     }
-    bool child_is_empty = false;
+    bool child_is_deficient = false;
     std::future<bool> fu =
         std::async(std::launch::async, &bp_node::remove, key_node, key);
-    child_is_empty = fu.get();
-    if (child_is_empty) {
-      //
+    child_is_deficient = fu.get();
+    if (child_is_deficient) {
+      if(key_node->is_leaf()) {
+        if(key_node == i_node->first_child) {
+          //ins_to is the min elem in children tree
+          key_node->join_(ins_to->data, false);
+        } else {}
+      } else {
+        
+      }
     }
   }
 }
@@ -497,13 +544,23 @@ void bp_tree::search(int low, int high) {
     this->output << "Null" << std::endl;
     return;
   }
-  // std::vector<float>* rs_ = new std::vector<float>();
   auto rs_ = root->search(low, high);
-  std::ostringstream ss;
+  
   for (auto r : *rs_) {
-    ss << r << ",";
+    this->output << r << ",";
   }
-  this->output << ss.str() << std::endl;
+  this->output << std::endl;
+  // std::vector<float>* rs_ = new std::vector<float>();
+  // std::vector<float>* rs_ = root->search(low, high);
+  // for (std::vector<float>::iterator it = rs_->begin(); it != rs_->end(); ++it) {
+  //   this->output << *it;
+  //   if(it == rs_->end()) {
+  //     this->output << std::endl;
+  //   } else {
+  //     this->output << ",";
+  //   }
+  // }
+  // this->output << ss.str() << std::endl;
 }
 
 void bp_tree::print() {
